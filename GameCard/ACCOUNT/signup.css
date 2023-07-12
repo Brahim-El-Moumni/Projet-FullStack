@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    font-family:arial;
+}
+@font-face{
+    font-family:"Beaumont";
+    src: url("../fonts/Catherine.ttf");
+}
+body{
+    background-image: linear-gradient(120deg,#e84393,#a29bfe);
+    
+}
+.FORM-text header a {
+    font-family: Beaumont;
+    font-size: 80px;
+    text-decoration: none;
+   
+    
+}
+.FORM-text header a:visited {
+    color: black;
+}
+.FORM-text header a:hover {
+    color: #FF00FF;
+}
+h1{
+    font-family: arial;
+    text-align: center;
+    margin-top: 10px;  
+}
+input{
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding: 7px;
+}
+.FORM{
+    width: 360px;
+    background: #ffffff;
+    height: 680px;
+    padding: 80px 40px;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.FORM-text {
+    margin-top: -55px;
+    text-align: center;
+}
+.FORM-text label{
+    font-family: arial;
+    font-size: 15px;
+    font-style: italic;
+}
+.msg-erreur{
+    font-size: 12px;
+    color: #e84393;
+}
+#accept{
+    font-size: 13px;
+}
+p{
+    font-size: 13px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+p a{
+    text-decoration: none;
+    font-weight: bold;
+}
+p a:visited{
+    color: black;
+}
+p a:hover{
+    color: #FF00FF; 
+}

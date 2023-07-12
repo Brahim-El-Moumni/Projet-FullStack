@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    font-family: arial;
+}
+@font-face {
+    font-family: "Beaumont";
+    src: url("../fonts/Catherine.ttf");
+}
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(120deg, #f1c40f, #fad390);
+}
+h1 {
+    font-family: Arial;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+.FORM {
+    width: 360px;
+    background: #ffffff;
+    height: 500px;
+    padding: 80px 40px;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    margin-top: 80px;
+}
+.FORM header a img {
+    text-align: center;
+}
+.form-text {
+    margin-top: -43px;
+}
+.form-text header a {
+    text-decoration: none;
+    font-family: Beaumont;
+    font-size: 80px;
+}
+.form-text header a:visited {
+    color: black;
+}
+
+.form-text header a:hover {
+    color: #ffc636;
+}
+.un {
+    font-family: arial;
+    font-size: 15px;
+
+}
+input {
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding: 7px;
+}
+label {
+    font-family: arial;
+    font-style: italic;
+}
+header {
+    text-align: center;
+}
+header a img {
+    text-align: center;
+    width: 200px;
+}
+.bottom-text p {
+    font-family: arial;
+    font-size: 13px;
+    font-weight: bold;
+}
+.bottom-text p a {
+    font-weight: bold;
+}
+#signup:visited {
+    color: black;
+}
+#signup:hover {
+    color: #ffb143;
+}
+#signup {
+    text-decoration: none;
+    font-family: arial;
+    font-size: 13px;
+}
+button {
+    margin-bottom: 15px;
+}
+.msg-erreur {
+    color: #ffc636;
+    font-family: arial;
+}
+.forgot-pwd {
+    font-size: 10px;
+    text-decoration: none;
+}
+.forgot-pwd:visited {
+    color: black;
+}
+.forgot-pwd:hover {
+    color: #ffc636;
+}

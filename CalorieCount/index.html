@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compteur de Calorie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Compteur de calories</h1>
+
+    <div class="formulaire">
+        <h2>Ajouter un aliment</h2>
+        <label for="nomAliment">Nom de l'aliment :</label>
+        <input type="text" name="" id="nomAliment">
+        <label for="calories">Calories :</label>
+        <input type="number" name="" id="calories">
+        <button id="ajouterAlimentBtn">Ajouter</button>
+    </div>
+
+    <div class="conteneurTableau">
+        <h2>Liste des aliments</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom de l'aliment</th>
+                    <th>Calories</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="listeAliments"></tbody>
+        </table> 
+    </div>
+
+    <div class="conteneurGraphique">
+        <h2>Graphique des calories consommées</h2>
+        <canvas id="graphiqueCalories"></canvas>
+        <canvas id="graphiqueCalories2"></canvas>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

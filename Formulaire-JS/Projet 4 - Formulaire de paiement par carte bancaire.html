@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        Projet 4 - Formulaire de paiement par carte bancaire - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{background:#fff;color:#333;display:block;overflow-x:auto;padding:.5em}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{background-color:#eaffea;color:#55a532}.hljs-deletion{background-color:#ffecec;color:#bd2c00}.hljs-link{text-decoration:underline}.markdown-body{word-wrap:break-word;font-size:16px;line-height:1.5}.markdown-body:after,.markdown-body:before{content:"";display:table}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-bottom:16px;margin-top:0}.markdown-body hr{background-color:#e7e7e7;border:0;height:.25em;margin:24px 0;padding:0}.markdown-body blockquote{border-left:.25em solid #ddd;color:#777;font-size:16px;padding:0 1em}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{background-color:#fcfcfc;border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb;color:#555;display:inline-block;font-size:11px;line-height:10px;padding:3px 5px;vertical-align:middle}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{font-weight:600;line-height:1.25;margin-bottom:16px;margin-top:24px}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{border-bottom:1px solid #eee;padding-bottom:.3em}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{color:#777;font-size:.85em}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{list-style-type:none;padding:0}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-bottom:0;margin-top:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{font-size:1em;font-style:italic;font-weight:700;margin-top:16px;padding:0}.markdown-body dl dd{margin-bottom:16px;padding:0 16px}.markdown-body table{display:block;overflow:auto;width:100%;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{border:1px solid #ddd;padding:6px 13px}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{background-color:#fff;box-sizing:initial;max-width:100%}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{background-color:initial;max-width:none;vertical-align:text-top}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{border:1px solid #ddd;display:block;float:left;margin:13px 0 0;overflow:hidden;padding:7px;width:auto}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{clear:both;color:#333;display:block;padding:5px 0 0}.markdown-body span.align-center{clear:both;display:block;overflow:hidden}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{clear:both;display:block;overflow:hidden}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{background-color:#0000000a;border-radius:3px;font-size:85%;margin:0;padding:.2em 0}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{content:"\00a0";letter-spacing:-.2em}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{background:#0000;border:0;font-size:100%;margin:0;padding:0;white-space:pre;word-break:normal}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{background-color:#f7f7f7;border-radius:3px;font-size:85%;line-height:1.45;overflow:auto;padding:16px}.markdown-body pre code,.markdown-body pre tt{word-wrap:normal;background-color:initial;border:0;display:inline;line-height:inherit;margin:0;max-width:auto;overflow:visible;padding:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{font-size:12px;line-height:1;overflow:hidden;padding:5px;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{background:#fff;border:0;padding:10px 8px 9px;text-align:right}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{background:#f8f8f8;border-top:0;font-weight:700}.news .alert .markdown-body blockquote{border:0;padding:0 0 0 40px}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{cursor:default!important;float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle}.markdown-body{max-width:758px;overflow:visible!important;padding-bottom:40px;padding-top:40px;position:relative}.markdown-body.next-editor{overflow-x:hidden!important}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{border-right:3px solid #6ce26c!important;box-sizing:initial;color:#afafaf!important;cursor:default;display:inline-block;min-width:20px;padding:0 8px 0 0;position:relative;text-align:right;z-index:4}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-bottom:none;border-left:none;border-top:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-collapse:inherit!important;border-spacing:0}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{margin-bottom:unset;overflow:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p:last-child{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{background-color:inherit;border-radius:0;overflow:visible;text-align:center;white-space:inherit}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{height:100%;max-width:100%}.markdown-body pre>code.wrap{word-wrap:break-word;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap}.markdown-body .alert>p:last-child,.markdown-body .alert>ul:last-child{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{background-color:#000;background-position:50%;background-repeat:no-repeat;background-size:contain;cursor:pointer;display:table;overflow:hidden;text-align:center}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{object-fit:contain;width:100%;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{height:100%;left:0;position:absolute;top:0;width:100%}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{color:#fff;height:auto;left:50%;opacity:.3;position:absolute;top:50%;transform:translate(-50%,-50%);transition:opacity .2s;width:auto;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.figma{display:table;padding-bottom:56.25%;position:relative;width:100%}.figma iframe{border:1px solid #eee;bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.markmap-container{height:300px}.markmap-container>svg{height:100%;width:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{color:#777;margin:25px auto -25px;max-width:760px;position:relative;z-index:2}.toc .invisable-node{list-style-type:none}.ui-toc{bottom:20px;position:fixed;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{border-bottom-left-radius:0;border-top-left-radius:0;height:40px;padding:10px 4px}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{color:#fff;opacity:1;transition:opacity .2s}.ui-toc-label:focus{background-color:#ccc;color:#000;opacity:.3}.ui-toc-label:hover{background-color:#ccc;opacity:1;transition:opacity .2s}.ui-toc-dropdown{margin-bottom:20px;margin-top:20px;max-height:70vh;max-width:45vw;overflow:auto;padding-left:10px;padding-right:10px;text-align:inherit;width:25vw}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{letter-spacing:.0029em;padding-right:0}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{color:#767676;display:block;font-size:13px;font-weight:500;padding:4px 20px}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{background-color:initial;border-left:1px solid #000;color:#000;padding-left:19px;text-decoration:none}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{border-left:none;border-right:1px solid #000;padding-right:19px}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{background-color:initial;border-left:2px solid #000;color:#000;font-weight:700;padding-left:18px}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{border-left:none;border-right:2px solid #000;padding-right:18px}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:30px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:40px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{font-weight:500;padding-left:28px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{font-weight:500;padding-left:38px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{max-height:70vh;max-width:15vw;overflow:auto;position:fixed;top:0}.back-to-top,.expand-toggle,.go-to-bottom{color:#999;display:block;font-size:12px;font-weight:500;margin-left:10px;margin-top:10px;padding:4px 10px}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{background-position:50%;background-repeat:no-repeat;background-size:cover;border-radius:50%;display:block;height:20px;margin-bottom:2px;margin-right:5px;margin-top:2px;width:20px}.ui-user-icon.small{display:inline-block;height:18px;margin:0 0 .2em;vertical-align:middle;width:18px}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;padding-left:22px;text-decoration:none}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}.inline-spoiler-section{cursor:pointer}.inline-spoiler-section .spoiler-text{background-color:#333;border-radius:2px}.inline-spoiler-section .spoiler-text>*{opacity:0}.inline-spoiler-section .spoiler-img{filter:blur(10px)}.inline-spoiler-section.raw{background-color:#333;border-radius:2px}.inline-spoiler-section.raw>*{opacity:0}.inline-spoiler-section.unveil{cursor:auto}.inline-spoiler-section.unveil .spoiler-text{background-color:#3333331a}.inline-spoiler-section.unveil .spoiler-text>*{opacity:1}.inline-spoiler-section.unveil .spoiler-img{filter:none}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{color:#222;position:relative;z-index:1}.markdown-body.slides:before{background-color:currentColor;bottom:0;box-shadow:0 0 0 50vw;content:"";display:block;left:0;position:absolute;right:0;top:0;z-index:-1}.markdown-body.slides section[data-markdown]{background-color:#fff;margin-bottom:1.5em;position:relative;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{left:1em;max-height:100%;overflow:hidden;position:absolute;right:1em;top:50%;transform:translateY(-50%)}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{border:3px solid #777;content:"";height:1.5em;position:absolute;right:1em;top:-1.5em}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;-webkit-overflow-scrolling:touch;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;letter-spacing:.025em}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}svg{text-shadow:none}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="Projet-4---Formulaire-de-paiement-par-carte-bancaire" data-id="Projet-4---Formulaire-de-paiement-par-carte-bancaire"><a class="anchor hidden-xs" href="#Projet-4---Formulaire-de-paiement-par-carte-bancaire" title="Projet-4---Formulaire-de-paiement-par-carte-bancaire"><span class="octicon octicon-link"></span></a><span>Projet 4 - Formulaire de paiement par carte bancaire</span></h1><h2 id="Introduction" data-id="Introduction"><a class="anchor hidden-xs" href="#Introduction" title="Introduction"><span class="octicon octicon-link"></span></a><span>Introduction</span></h2><p><span>Nous continuons nos réaliastion avec notre quatrième projet qui sera un formulaire de paiement par carte bancaire.</span></p><p><span>Dans ce quatrième cas nous allons donc créer formulaire de paiement pour carte bleu avec des input pour carte de crédit, avec les champ titulaire de la carte, numéros de la carte etc…</span></p><p><span>La page final ressemblera à ceci :</span></p><p><img src="https://i.imgur.com/8uF8FTi.png" alt="" loading="lazy"></p><p><span>Pour la réaliseation de cette page nous aurons besoin d’utiliser 3 langages HTML/CSS et JavaScript.</span></p><h2 id="Structure-HTML" data-id="Structure-HTML"><a class="anchor hidden-xs" href="#Structure-HTML" title="Structure-HTML"><span class="octicon octicon-link"></span></a><span>Structure HTML</span></h2><p><span>Avant de commencer vous pouvez télécharger les documents source de ce formulaire en cliquant </span><b><a href="https://github.com/shadobot/ressources-front" target="_blank" rel="noopener"><span>sur ce lien</span></a></b><span> et dans lequel vous trouverez les fichiers de base (vide bien sûr) et le logo à utiliser dans le dossier 1.4 formcartedecredit.</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span><span class="hljs-operator">!</span>DOCTYPE html<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>html lang<span class="hljs-operator">=</span><span class="hljs-string">"en"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>head<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>meta charset<span class="hljs-operator">=</span><span class="hljs-string">"UTF-8"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>meta name<span class="hljs-operator">=</span><span class="hljs-string">"viewport"</span> content<span class="hljs-operator">=</span><span class="hljs-string">"width=device-width, initial-scale=1.0"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>title<span class="hljs-operator">&gt;</span>Carte de crédit<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>title<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>link rel<span class="hljs-operator">=</span><span class="hljs-string">"stylesheet"</span> href<span class="hljs-operator">=</span><span class="hljs-string">"style.css"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>head<span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>body<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>div class<span class="hljs-operator">=</span><span class="hljs-string">"container"</span><span class="hljs-operator">&gt;</span>
+        <span class="hljs-operator">&lt;</span>div class<span class="hljs-operator">=</span><span class="hljs-string">"contMontant"</span><span class="hljs-operator">&gt;</span>
+            <span class="hljs-operator">&lt;</span>p<span class="hljs-operator">&gt;</span><span class="hljs-number">1</span> <span class="hljs-operator">&lt;</span>strong<span class="hljs-operator">&gt;</span>Mug blanc<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>strong<span class="hljs-operator">&gt;</span> : <span class="hljs-number">5</span>€<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>p<span class="hljs-operator">&gt;</span>
+        <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>div<span class="hljs-operator">&gt;</span>
+        <span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+            <span class="hljs-operator">&lt;</span>div class<span class="hljs-operator">=</span><span class="hljs-string">"inpFull"</span><span class="hljs-operator">&gt;</span>
+                <span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"nom"</span><span class="hljs-operator">&gt;</span>Titulaire<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+                <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"nom"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"titulaire"</span> required maxlength<span class="hljs-operator">=</span><span class="hljs-string">"30"</span> placeholder<span class="hljs-operator">=</span><span class="hljs-string">"Entrez le titulaire de la carte"</span><span class="hljs-operator">&gt;</span>
+            <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>div<span class="hljs-operator">&gt;</span>
+            <span class="hljs-operator">&lt;</span>div class<span class="hljs-operator">=</span><span class="hljs-string">"inpFull"</span><span class="hljs-operator">&gt;</span>
+                <span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"num"</span><span class="hljs-operator">&gt;</span>Numéros<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+                <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"num"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"numeros"</span> required placeholder<span class="hljs-operator">=</span><span class="hljs-string">"8888-8888-8888-8888"</span> pattern<span class="hljs-operator">=</span><span class="hljs-string">"[0-9\s]+"</span><span class="hljs-operator">&gt;</span>
+            <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>div<span class="hljs-operator">&gt;</span>
+            <span class="hljs-operator">&lt;</span>div class<span class="hljs-operator">=</span><span class="hljs-string">"contExSecu"</span><span class="hljs-operator">&gt;</span>
+                <span class="hljs-operator">&lt;</span>div class<span class="hljs-operator">=</span><span class="hljs-string">"inpExp"</span><span class="hljs-operator">&gt;</span>
+                    <span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"expiration"</span><span class="hljs-operator">&gt;</span>Expiration<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+                    <span class="hljs-operator">&lt;</span>select name<span class="hljs-operator">=</span><span class="hljs-string">"moisexp"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"expiration"</span> class<span class="hljs-operator">=</span><span class="hljs-string">"select1"</span><span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"1"</span><span class="hljs-operator">&gt;</span>01<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"2"</span><span class="hljs-operator">&gt;</span>02<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"3"</span><span class="hljs-operator">&gt;</span>03<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"4"</span><span class="hljs-operator">&gt;</span>04<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"5"</span><span class="hljs-operator">&gt;</span>05<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"6"</span><span class="hljs-operator">&gt;</span>06<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"7"</span><span class="hljs-operator">&gt;</span>07<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"8"</span><span class="hljs-operator">&gt;</span>08<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"9"</span><span class="hljs-operator">&gt;</span>09<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"10"</span><span class="hljs-operator">&gt;</span><span class="hljs-number">10</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"11"</span><span class="hljs-operator">&gt;</span><span class="hljs-number">11</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"12"</span><span class="hljs-operator">&gt;</span><span class="hljs-number">12</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                    <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>select<span class="hljs-operator">&gt;</span>
+                    <span class="hljs-operator">&lt;</span>span<span class="hljs-operator">&gt;</span><span class="hljs-operator">/</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>span<span class="hljs-operator">&gt;</span>
+                    <span class="hljs-operator">&lt;</span>select name<span class="hljs-operator">=</span><span class="hljs-string">"anexp"</span> class<span class="hljs-operator">=</span><span class="hljs-string">"select2"</span><span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"2023"</span><span class="hljs-operator">&gt;</span><span class="hljs-number">2023</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"2024"</span><span class="hljs-operator">&gt;</span><span class="hljs-number">2024</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"2025"</span><span class="hljs-operator">&gt;</span><span class="hljs-number">2025</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"2026"</span><span class="hljs-operator">&gt;</span><span class="hljs-number">2026</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"2027"</span><span class="hljs-operator">&gt;</span><span class="hljs-number">2027</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"2028"</span><span class="hljs-operator">&gt;</span><span class="hljs-number">2028</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"2029"</span><span class="hljs-operator">&gt;</span><span class="hljs-number">2029</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"2030"</span><span class="hljs-operator">&gt;</span><span class="hljs-number">2030</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"2031"</span><span class="hljs-operator">&gt;</span><span class="hljs-number">2031</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"2032"</span><span class="hljs-operator">&gt;</span><span class="hljs-number">2032</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                        <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"2033"</span><span class="hljs-operator">&gt;</span><span class="hljs-number">2033</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+                    <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>select<span class="hljs-operator">&gt;</span>
+                <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>div<span class="hljs-operator">&gt;</span>
+                <span class="hljs-operator">&lt;</span>div class<span class="hljs-operator">=</span><span class="hljs-string">"inpSecu"</span><span class="hljs-operator">&gt;</span>
+                    <span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"crypto"</span><span class="hljs-operator">&gt;</span>Cryptogramme<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+                    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"crypto"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"crypto"</span> required maxlength<span class="hljs-operator">=</span><span class="hljs-string">"3"</span> placeholder<span class="hljs-operator">=</span><span class="hljs-string">"XXX"</span> pattern<span class="hljs-operator">=</span><span class="hljs-string">"[0-9]{3}"</span><span class="hljs-operator">&gt;</span>
+                <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>div<span class="hljs-operator">&gt;</span>
+
+            <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>div<span class="hljs-operator">&gt;</span>  
+            <span class="hljs-operator">&lt;</span>div class<span class="hljs-operator">=</span><span class="hljs-string">"contBtn"</span><span class="hljs-operator">&gt;</span>
+                <span class="hljs-operator">&lt;</span>button<span class="hljs-operator">&gt;</span>Confirmer et payer<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>button<span class="hljs-operator">&gt;</span>
+            <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>div<span class="hljs-operator">&gt;</span>
+        <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>div<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>body<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>html<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><strong><span>Explication de la page</span></strong></p><p><span>Cette page HTML contient donc un formulaire de paiement. Il y a une div parent avec la classe “container” qui contient tous les éléments suivants :</span></p><p><span>Une div avec la classe “contMontant” qui contient un paragraphe avec le texte “1 Mug blanc : 5€”.</span></p><p><span>Un formulaire qui commence avec la balise </span><code>&lt;form&gt;</code><span>.</span></p><p><span>Dans le formulaire, il y a trois divs contenant des étiquettes et des champs d’entrée pour les informations du titulaire de carte, les numéros de carte, la date d’expiration et le cryptogramme.</span></p><p><span>La première div a la classe “inpFull” et contient une étiquette pour le champ d’entrée “Titulaire” et un champ d’entrée de type “text” avec un id “nom”, un nom “titulaire”, un attribut “required” et un attribut “maxlength” de 30 caractères.</span></p><p><span>Il y a également un attribut “placeholder” pour donner des instructions de saisie à l’utilisateur.</span></p><p><span>La deuxième div a également la classe “inpFull” et contient une étiquette pour le champ d’entrée “Numéros” et un champ d’entrée de type “text” avec un id “num”, un nom “numeros”, un attribut “required”, un attribut “pattern” pour n’accepter que des chiffres et des espaces et un attribut “placeholder” pour les numéros de carte.</span></p><p><span>La troisième div a la classe “contExSecu” et contient deux divs enfants. La première div a la classe “inpExp” et contient une étiquette pour le champ d’entrée “Expiration”, deux sélecteurs de liste déroulante pour le mois et l’année d’expiration et un span qui contient le caractère “/”.</span></p><p><span>La deuxième div a la classe “inpSecu” et contient une étiquette pour le champ d’entrée “Cryptogramme” et un champ d’entrée de type “text” avec un nom “crypto”, un id “crypto”, un attribut “required”, un attribut “maxlength” de 3 caractères et un attribut “pattern” pour n’accepter que des chiffres.</span></p><p><span>La dernière div a la classe “contBtn” et contient un bouton de type “submit” avec le texte “Confirmer et payer”.</span></p><h2 id="Réalisation-du-style" data-id="Réalisation-du-style"><a class="anchor hidden-xs" href="#Réalisation-du-style" title="Réalisation-du-style"><span class="octicon octicon-link"></span></a><span>Réalisation du style</span></h2><div class="alert alert-warning">
+<p><span>N’ésiter pas à aller voir le résultat de votre page après chaque insertion de style css.</span></p>
+</div><p><span>Si vous observer votre page, ce n’est pas encore ça ! C’est pourquoi nous allons maintenant voir comment styliser tout ça avec du CSS.</span></p><p><span>Donc c’est partie comme d’habitude on ouvre notre feuille de style “style.css”.</span></p><p><span>Comme toujours on commence par le style de base de notre page, les sélecteurs universel et le body :</span></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code">*, <span class="hljs-selector-pseudo">::before</span>, <span class="hljs-selector-pseudo">::after</span> {
+    <span class="hljs-attribute">box-sizing</span>: border-box;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-tag">body</span> {
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">'Segoe UI'</span>, Tahoma, Geneva, Verdana, sans-serif;
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#333</span>;
+}
+</div></div></code></pre><p><span>L’ensemble des éléments de la page (</span><code>*</code><span>) auront la propriété </span><code>box-sizing</code><span> avec la valeur </span><code>border-box</code><span>, ce qui signifie que la taille totale de l’élément inclut sa bordure et son remplissage.</span></p><p><span>L’ensemble des éléments de la page (</span><code>*</code><span>) auront une marge et un remplissage de 0.</span><br>
+<span>Sélecteur de balise :</span></p><p><span>L’élément </span><code>body</code><span> aura la police de caractères Segoe UI, Tahoma, Geneva, Verdana ou police sans-serif.</span></p><p><strong><span>Style du sélecteur .container</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-class">.container</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">550px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">520px</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">100px</span> auto;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;
+}
+</div></div></code></pre><p><span>Dans ce sélecteur nous définisson les propriétés suivantes pour la balise HTML de classe “container”</span></p><ul>
+<li><span>La largeur et la hauteur du conteneur à 550px et 520px respectivement</span></li>
+<li><span>La couleur de fond à blanc </span><code class="color-indicator">#ffffff<span class="ml-1 inline-block rounded-sm" style="width: 10px; height: 10px; background-color: rgb(255, 255, 255);"></span></code></li>
+<li><span>La marge du conteneur à 100px sur le dessus et en bas et centrée horizontalement à l’aide de la propriété </span><code>margin</code></li>
+<li><span>Ajoute un arrondi de 5px sur les coins du conteneur en utilisant la propriété </span><code>border-radius</code></li>
+</ul><p><strong><span>Style du sélecteur .contMontant</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-class">.contMontant</span> {
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">25px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">90px</span>;
+    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> dashed <span class="hljs-number">#000</span>;
+}
+</div></div></code></pre><p><span>Dans ce sélecteur nous définisson les propriétés suivantes pour la balise HTML de classe “contMontant”</span></p><ul>
+<li><span>Centre le texte dans le conteneur à l’aide de la propriété “text-align”</span></li>
+<li><span>Définit la taille de police du texte à 25px</span></li>
+<li><span>Définit la hauteur du conteneur à 90px</span></li>
+<li><span>Ajoute une bordure en pointillé de couleur noire en utilisant la propriété “border-bottom”</span></li>
+</ul><p><strong><span>Sélecteur .contMontant p</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-class">.contMontant</span> <span class="hljs-selector-tag">p</span> {
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">90px</span>;
+}
+</div></div></code></pre><p><span>Dans ce sélecteur nous définisson les propriétés suivantes pour la balise “p” qui est enfant de la balise HTML de classe “contMontant”</span></p><ul>
+<li><span>Définit la hauteur de la ligne du texte à 90px</span></li>
+</ul><p><strong><span>Style du sélecteur .inpFull</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-class">.inpFull</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+}
+<span class="hljs-selector-class">.inpFull</span><span class="hljs-selector-pseudo">:nth-child</span>(<span class="hljs-number">1</span>) {
+    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> dashed <span class="hljs-number">#000</span>;
+}
+</div></div></code></pre><p><span>Dans ce sélecteur nous définisson les propriétés suivantes pour la balise HTML de classe “inpFull”</span></p><ul>
+<li><span>Définit la largeur à 100% et la hauteur à 100px</span></li>
+<li><span>Ajoute une bordure en pointillé de couleur noire à la première instance de “.inpFull” en utilisant le sélecteur </span><code>:nth-child(1)</code></li>
+</ul><p><strong><span>Style du sélecteur .inpFull label</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-class">.inpFull</span> <span class="hljs-selector-tag">label</span> {
+    <span class="hljs-attribute">float</span>: left;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">30%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">22px</span>;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">96px</span>;
+    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">30px</span>;
+    <span class="hljs-attribute">cursor</span>: pointer;
+}
+</div></div></code></pre><p><span>Dans ce sélecteur nous définisson les propriétés suivantes pour la balise “label” qui est enfant de la balise HTML de classe “inpFull”</span></p><ul>
+<li><span>Aligne le texte à gauche et le flotte à gauche à l’aide de la propriété </span><code>float</code></li>
+<li><span>Définit la largeur à 30% et la hauteur à 100%</span></li>
+<li><span>Définit la taille de police du texte à 22px</span></li>
+<li><span>Définit le texte comme un élément de type bloc en utilisant la propriété </span><code>display</code></li>
+<li><span>Définit la hauteur de la ligne de texte à 96px</span></li>
+<li><span>Ajoute un espacement de 30px à gauche à l’aide de la propriété </span><code>padding-left</code></li>
+<li><span>Définit le curseur de la souris comme pointeur à l’aide de la propriété </span><code>cursor</code></li>
+</ul><p><strong><span>Style du sélecteur .inpFull input</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-class">.inpFull</span> <span class="hljs-selector-tag">input</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">70%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">border</span>: none;
+    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">5px</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">18px</span>;
+}
+</div></div></code></pre><p><span>Dans ce sélecteur nous définisson les propriétés suivantes pour la balise “input” qui est enfant de la balise HTML de classe “inpFull”</span></p><ul>
+<li><span>Définit la largeur à 70% et la hauteur à 100%</span></li>
+<li><span>Supprime la bordure en utilisant la propriété </span><code>border</code></li>
+<li><span>Ajoute un espacement de 5px à gauche à l’aide de la propriété </span><code>padding-left</code></li>
+<li><span>Définit la taille de police du texte à 18px</span></li>
+</ul><p><strong><span>Style du sélecteur “.inpFull input::placeholder”</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-class">.inpFull</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">::placeholder</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">15px</span>;
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.8</span>;
+}
+</div></div></code></pre><p><span>Dans ce sélecteur nous définisson les propriétés suivantes pour le texte d’indication de la balise “input” qui est enfant de la balise HTML de classe “inpFull”</span></p><ul>
+<li><span>Définit la taille de police du texte à 15px</span></li>
+<li><span>Définit l’opacité à 0.8 pour le placeholder (texte gris clair affiché dans un champ de formulaire lorsque celui-ci est vide) des champs de saisie.</span></li>
+</ul><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:active</span>, <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:focus</span> {
+    <span class="hljs-attribute">outline</span>: none;
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#f1f1f1</span>;
+}
+
+</div></div></code></pre><p><span>Ensuite, le sélecteur </span><code>input:active</code><span>, input:focus applique des styles aux champs de saisie qui ont le focus ou qui sont activés (sélectionnés). Il retire la bordure de focus en définissant </span><code>outline</code><span> à </span><code>none</code><span>, et change la couleur de fond à </span><code class="color-indicator">#f1f1f1<span class="ml-1 inline-block rounded-sm" style="width: 10px; height: 10px; background-color: rgb(241, 241, 241);"></span></code><span>.</span></p><p><strong><span>Style du sélecteur .contExSecu</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-class">.contExSecu</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">80px</span>;
+    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> dashed black;
+    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> dashed black;
+}
+</div></div></code></pre><p><span>Le sélecteur .contExSecu définit les styles de la </span><code>div</code><span> qui contient les champs d’expiration et de sécurité. Il définit une largeur de 100%, une hauteur de 80px, et ajoute des bordures pointillées en haut et en bas de la div.</span></p><p><strong><span>Style des sélecteurs .inExp et .inSecu</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-class">.inpExp</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">48%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">float</span>: left;
+    <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1px</span> dashed black;
+}
+
+<span class="hljs-selector-class">.inpSecu</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">52%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">float</span>: right;
+    <span class="hljs-attribute">position</span>: relative;
+}
+</div></div></code></pre><p><span>Les sélecteurs .inpExp et .inpSecu définissent les styles des champs d’expiration et de sécurité, respectivement. Les deux champs sont définis avec une largeur de 48% et 52% respectivement, ce qui les fait apparaître côte à côte. Les styles </span><code>float: left</code><span> et </span><code>float: right</code><span> positionnent les champs à gauche et à droite de la div parent, respectivement. Les bordures pointillées sont ajoutées aux champs d’expiration avec </span><code>border-right: 1px dashed black</code><span>. Le sélecteur .inpSecu en possition relative à la div parentes.</span></p><p><strong><span>Style du sélecteur select et .select2</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code">select {
+    <span class="hljs-attribute">border</span>: none;
+}
+<span class="hljs-selector-class">.select2</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">60px</span>;
+}
+</div></div></code></pre><p><span>Le sélecteur select définit les styles pour les menus déroulants. Dans ce cas, il retire les bordures par défaut avec </span><code>border: none</code><span>.</span></p><p><span>Le sélecteur .select2 définit les styles pour une classe spécifique de menus déroulants. Dans ce cas, il définit une largeur de 60px.</span></p><p><strong><span>Style du sélecteur .inpSecu label</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-class">.inpSecu</span> <span class="hljs-selector-tag">label</span> {
+    <span class="hljs-attribute">float</span>: left;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">45%</span>;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">76px</span>;
+    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">15px</span>;
+}
+</div></div></code></pre><p><span>Le sélecteur .inpSecu label définit les styles pour l’étiquette associée au champ de sécurité. L’étiquette est positionnée à gauche du champ avec </span><code>float: left</code><span>, a une largeur de 45%, et une hauteur de ligne de 76px. </span><code>padding-left</code><span> est défini à 15px pour ajouter un espacement à gauche de l’étiquette.</span></p><p><strong><span>Style du sélecteur .inpSecu input</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-class">.inpSecu</span> <span class="hljs-selector-tag">input</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">55%</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">border</span>: none;
+    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">10px</span>;
+}
+</div></div></code></pre><p><span>Le sélecteur .inpSecu input définit les styles pour le champ de sécurité lui-même. Le champ est positionné à droite de l’étiquette avec width: 55%, a une hauteur de 100%, et aucune bordure. </span><code>padding-left</code><span> est défini à 10px pour ajouter un espacement à gauche du champ.</span></p><p><strong><span>Style du sélecteur .inpSecu input::placeholder</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-class">.inpSecu</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">::placeholder</span> {
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.8</span>;
+}
+</div></div></code></pre><p><strong><span>Style du sélecteur .contBtn</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-class">.contBtn</span> {
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">150px</span>;
+    <span class="hljs-attribute">border-bottom-left-radius</span>: <span class="hljs-number">5px</span>;
+    <span class="hljs-attribute">border-bottom-right-radius</span>: <span class="hljs-number">5px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+}
+</div></div></code></pre><p><span>Le sélecteur .contBtn définit les styles pour la div qui contient le bouton de paiement.</span></p><p><span>La div est positionnée relativement par rapport à son conteneur parent. Elle a une hauteur de 150px et une bordure inférieure à coins arrondis.</span></p><p><strong><span>Style du sélecteur .contBtn button</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-class">.contBtn</span> <span class="hljs-selector-tag">button</span> {
+    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">194</span>,<span class="hljs-number">194</span>,<span class="hljs-number">194</span>);
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(-<span class="hljs-number">50%</span>, -<span class="hljs-number">50%</span>);
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">400px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">60px</span>;
+    <span class="hljs-attribute">border</span>: none;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;
+    <span class="hljs-attribute">cursor</span>: pointer;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">18px</span>;
+    <span class="hljs-attribute">transition</span>: <span class="hljs-number">0.2s</span> ease background;
+}
+</div></div></code></pre><p><span>Dans ce sélecteur nous définisson les propriétés suivantes pour la balise “button” qui est enfant de la balise HTML de classe “contBtn”</span></p><p><code>background: rgb(194,194,194);</code><span> : Définit la couleur de fond du bouton en utilisant une valeur RGB.</span></p><p><code>display: block;</code><span> : Le bouton est affiché comme un élément de type “bloc”, ce qui signifie qu’il occupe toute la largeur de son conteneur et crée une nouvelle ligne.</span></p><p><code>position: absolute;</code><span> : Le bouton est positionné absolument par rapport à son premier parent positionné. Cela signifie que les propriétés </span><code>top</code><span>, </span><code>left</code><span>, </span><code>right</code><span> et </span><code>bottom</code><span> peuvent être utilisées pour définir sa position exacte.</span></p><p><code>top: 50%;</code><span> et </span><code>left: 50%;</code><span> : Ces propriétés placent le bouton au milieu de son conteneur en le positionnant à 50% de la largeur et de la hauteur de son parent.</span></p><p><code>transform: translate(-50%, -50%);</code><span> : Cette propriété déplace le bouton de moitié de sa propre largeur et de sa propre hauteur vers la gauche et le haut, respectivement. Cela permet de centrer parfaitement le bouton dans son conteneur.</span></p><p><code>width: 400px;</code><span> et </span><code>height: 60px</code><span>; : Ces propriétés définissent la largeur et la hauteur du bouton en pixels.</span></p><p><code>border: none;</code><span> : Supprime les bordures du bouton.</span></p><p><code>border-radius: 5px;</code><span> : Arrondit les coins du bouton en utilisant une valeur de rayon de 5 pixels.</span></p><p><code>cursor: pointer;</code><span> : Change le curseur de la souris pour le bouton en une main, pour indiquer qu’il est cliquable.</span></p><p><code>font-size: 18px;</code><span> : Définit la taille de police du texte à 18 pixels.</span></p><p><code>transition: 0.2s ease background;</code><span> : Cette propriété crée une transition en douceur de 0,2 seconde lorsqu’on survole le bouton. L’effet de transition affecte uniquement la propriété </span><code>background</code><span> (couleur de fond).</span></p><p><strong><span>Style du sélecteur .contBtn button::hover</span></strong></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-tag">button</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">background</span>: lightblue;
+}
+</div></div></code></pre><p><span>Lorsque l’utilisateur survole le bouton avec la souris, la couleur de fond change en lightblue grâce au style du sélecteur </span><code>button:hover</code><span>.</span></p><h2 id="Réalisation-du-Javascript" data-id="Réalisation-du-Javascript"><a class="anchor hidden-xs" href="#Réalisation-du-Javascript" title="Réalisation-du-Javascript"><span class="octicon octicon-link"></span></a><span>Réalisation du Javascript</span></h2><p><span>Dans ce projet nous n’allons pas directement ajouter notre script JS dans une balise </span><code>&lt;scrip&gt;...&lt;/scrip&gt;</code><span> directement dans notre page HTML mais nous allons faire appel à un script app.js que nous appelerons dans notre page.</span></p><p><span>Du coup dans notre page HTML nous devons ajouter l’appel à notre script en toute fin du body.</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>html lang<span class="hljs-operator">=</span><span class="hljs-string">"en"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>head<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>meta charset<span class="hljs-operator">=</span><span class="hljs-string">"UTF-8"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>meta name<span class="hljs-operator">=</span><span class="hljs-string">"viewport"</span> content<span class="hljs-operator">=</span><span class="hljs-string">"width=device-width, initial-scale=1.0"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>title<span class="hljs-operator">&gt;</span>Carte de crédit<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>title<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>link rel<span class="hljs-operator">=</span><span class="hljs-string">"stylesheet"</span> href<span class="hljs-operator">=</span><span class="hljs-string">"style.css"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>head<span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>body<span class="hljs-operator">&gt;</span>
+    ...
+    <span class="hljs-operator">&lt;</span>script<span class="hljs-operator">&gt;</span>app.js&lt;<span class="hljs-operator">/</span>script<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>body<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>html<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Passons maintenant au script JS.</span></p><pre><code class="javascript hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="token keyword">const</span> inpCard <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'num'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+inpCard<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'keyup'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    
+    <span class="token keyword">let</span> val <span class="token operator">=</span> inpCard<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+    <span class="token keyword">let</span> newval <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+
+    val <span class="token operator">=</span> val<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\s</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> val<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>i <span class="token operator">%</span> <span class="token number">4</span> <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> i <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            newval <span class="token operator">=</span> newval<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        newval <span class="token operator">=</span> newval<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>val<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      
+    <span class="token punctuation">}</span>
+    inpCard<span class="token punctuation">.</span>value <span class="token operator">=</span> newval<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</div></div></code></pre><p><span>Ici dans notre JavaScript utilise un écouteur d’événement pour suivre l’événement “keyup” sur un élément de formulaire HTML avec l’ID “num”. Lorsque l’utilisateur saisit quelque chose dans cet élément, la fonction fléchée associée à l’événement est appelée.</span></p><p><span>La fonction récupère la valeur actuelle de l’élément “num” en utilisant la propriété value de l’objet input. Ensuite, elle utilise la méthode </span><code>replace()</code><span> avec une expression régulière pour supprimer tous les espaces dans la chaîne de caractères.</span></p><p><span>Ensuite, la fonction boucle à travers chaque caractère de la chaîne de caractères de l’input. Si l’indice est divisible par 4 et est supérieur à 0, cela signifie qu’il faut ajouter un espace avant le caractère. Cette opération ajoute un espace tous les 4 caractères pour simuler le formatage d’un numéro de carte de crédit.</span></p><p><span>Finalement, la fonction met à jour la valeur de l’input avec la nouvelle valeur formatée. Ainsi, chaque fois que l’utilisateur tape dans l’input, le numéro de carte de crédit est automatiquement formaté pour ressembler à un numéro de carte valide.</span></p><p><span>Et normalement nous avons finit avec notre formulaire avec des input carte de crédit conprenant tout les champs nécessaire pour la validation d’un paiement par carte sur notre site et le résultat final est donc le suivant:</span></p><p><img src="https://i.imgur.com/8uF8FTi.png" alt="" loading="lazy"></p><p><span>Pas mal non ! Allez on passe au projet suivant qui consistera à la mise en place d’un formulaire de contatc complet avec des champs nom, prénom, email, une sélect box et un champ textaréa pour écrire un commentaire.</span></p></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li><a href="#Projet-4---Formulaire-de-paiement-par-carte-bancaire" title="Projet 4 - Formulaire de paiement par carte bancaire">Projet 4 - Formulaire de paiement par carte bancaire</a><ul class="nav">
+<li><a href="#Introduction" title="Introduction">Introduction</a></li>
+<li><a href="#Structure-HTML" title="Structure HTML">Structure HTML</a></li>
+<li><a href="#Réalisation-du-style" title="Réalisation du style">Réalisation du style</a></li>
+<li><a href="#Réalisation-du-Javascript" title="Réalisation du Javascript">Réalisation du Javascript</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li><a href="#Projet-4---Formulaire-de-paiement-par-carte-bancaire" title="Projet 4 - Formulaire de paiement par carte bancaire">Projet 4 - Formulaire de paiement par carte bancaire</a><ul class="nav">
+<li><a href="#Introduction" title="Introduction">Introduction</a></li>
+<li><a href="#Structure-HTML" title="Structure HTML">Structure HTML</a></li>
+<li><a href="#Réalisation-du-style" title="Réalisation du style">Réalisation du style</a></li>
+<li><a href="#Réalisation-du-Javascript" title="Réalisation du Javascript">Réalisation du Javascript</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>

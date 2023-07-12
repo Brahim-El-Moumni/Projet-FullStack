@@ -1,0 +1,2 @@
+# rick
+projet rick JS

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        Les formulaire - théorie - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{background:#fff;color:#333;display:block;overflow-x:auto;padding:.5em}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{background-color:#eaffea;color:#55a532}.hljs-deletion{background-color:#ffecec;color:#bd2c00}.hljs-link{text-decoration:underline}.markdown-body{word-wrap:break-word;font-size:16px;line-height:1.5}.markdown-body:after,.markdown-body:before{content:"";display:table}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-bottom:16px;margin-top:0}.markdown-body hr{background-color:#e7e7e7;border:0;height:.25em;margin:24px 0;padding:0}.markdown-body blockquote{border-left:.25em solid #ddd;color:#777;font-size:16px;padding:0 1em}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{background-color:#fcfcfc;border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb;color:#555;display:inline-block;font-size:11px;line-height:10px;padding:3px 5px;vertical-align:middle}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{font-weight:600;line-height:1.25;margin-bottom:16px;margin-top:24px}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{border-bottom:1px solid #eee;padding-bottom:.3em}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{color:#777;font-size:.85em}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{list-style-type:none;padding:0}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-bottom:0;margin-top:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{font-size:1em;font-style:italic;font-weight:700;margin-top:16px;padding:0}.markdown-body dl dd{margin-bottom:16px;padding:0 16px}.markdown-body table{display:block;overflow:auto;width:100%;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{border:1px solid #ddd;padding:6px 13px}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{background-color:#fff;box-sizing:initial;max-width:100%}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{background-color:initial;max-width:none;vertical-align:text-top}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{border:1px solid #ddd;display:block;float:left;margin:13px 0 0;overflow:hidden;padding:7px;width:auto}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{clear:both;color:#333;display:block;padding:5px 0 0}.markdown-body span.align-center{clear:both;display:block;overflow:hidden}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{clear:both;display:block;overflow:hidden}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{background-color:#0000000a;border-radius:3px;font-size:85%;margin:0;padding:.2em 0}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{content:"\00a0";letter-spacing:-.2em}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{background:#0000;border:0;font-size:100%;margin:0;padding:0;white-space:pre;word-break:normal}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{background-color:#f7f7f7;border-radius:3px;font-size:85%;line-height:1.45;overflow:auto;padding:16px}.markdown-body pre code,.markdown-body pre tt{word-wrap:normal;background-color:initial;border:0;display:inline;line-height:inherit;margin:0;max-width:auto;overflow:visible;padding:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{font-size:12px;line-height:1;overflow:hidden;padding:5px;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{background:#fff;border:0;padding:10px 8px 9px;text-align:right}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{background:#f8f8f8;border-top:0;font-weight:700}.news .alert .markdown-body blockquote{border:0;padding:0 0 0 40px}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{cursor:default!important;float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle}.markdown-body{max-width:758px;overflow:visible!important;padding-bottom:40px;padding-top:40px;position:relative}.markdown-body.next-editor{overflow-x:hidden!important}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{border-right:3px solid #6ce26c!important;box-sizing:initial;color:#afafaf!important;cursor:default;display:inline-block;min-width:20px;padding:0 8px 0 0;position:relative;text-align:right;z-index:4}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-bottom:none;border-left:none;border-top:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-collapse:inherit!important;border-spacing:0}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{margin-bottom:unset;overflow:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p:last-child{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{background-color:inherit;border-radius:0;overflow:visible;text-align:center;white-space:inherit}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{height:100%;max-width:100%}.markdown-body pre>code.wrap{word-wrap:break-word;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap}.markdown-body .alert>p:last-child,.markdown-body .alert>ul:last-child{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{background-color:#000;background-position:50%;background-repeat:no-repeat;background-size:contain;cursor:pointer;display:table;overflow:hidden;text-align:center}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{object-fit:contain;width:100%;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{height:100%;left:0;position:absolute;top:0;width:100%}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{color:#fff;height:auto;left:50%;opacity:.3;position:absolute;top:50%;transform:translate(-50%,-50%);transition:opacity .2s;width:auto;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.figma{display:table;padding-bottom:56.25%;position:relative;width:100%}.figma iframe{border:1px solid #eee;bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.markmap-container{height:300px}.markmap-container>svg{height:100%;width:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{color:#777;margin:25px auto -25px;max-width:760px;position:relative;z-index:2}.toc .invisable-node{list-style-type:none}.ui-toc{bottom:20px;position:fixed;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{border-bottom-left-radius:0;border-top-left-radius:0;height:40px;padding:10px 4px}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{color:#fff;opacity:1;transition:opacity .2s}.ui-toc-label:focus{background-color:#ccc;color:#000;opacity:.3}.ui-toc-label:hover{background-color:#ccc;opacity:1;transition:opacity .2s}.ui-toc-dropdown{margin-bottom:20px;margin-top:20px;max-height:70vh;max-width:45vw;overflow:auto;padding-left:10px;padding-right:10px;text-align:inherit;width:25vw}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{letter-spacing:.0029em;padding-right:0}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{color:#767676;display:block;font-size:13px;font-weight:500;padding:4px 20px}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{background-color:initial;border-left:1px solid #000;color:#000;padding-left:19px;text-decoration:none}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{border-left:none;border-right:1px solid #000;padding-right:19px}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{background-color:initial;border-left:2px solid #000;color:#000;font-weight:700;padding-left:18px}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{border-left:none;border-right:2px solid #000;padding-right:18px}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:30px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:40px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{font-weight:500;padding-left:28px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{font-weight:500;padding-left:38px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{max-height:70vh;max-width:15vw;overflow:auto;position:fixed;top:0}.back-to-top,.expand-toggle,.go-to-bottom{color:#999;display:block;font-size:12px;font-weight:500;margin-left:10px;margin-top:10px;padding:4px 10px}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{background-position:50%;background-repeat:no-repeat;background-size:cover;border-radius:50%;display:block;height:20px;margin-bottom:2px;margin-right:5px;margin-top:2px;width:20px}.ui-user-icon.small{display:inline-block;height:18px;margin:0 0 .2em;vertical-align:middle;width:18px}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;padding-left:22px;text-decoration:none}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}.inline-spoiler-section{cursor:pointer}.inline-spoiler-section .spoiler-text{background-color:#333;border-radius:2px}.inline-spoiler-section .spoiler-text>*{opacity:0}.inline-spoiler-section .spoiler-img{filter:blur(10px)}.inline-spoiler-section.raw{background-color:#333;border-radius:2px}.inline-spoiler-section.raw>*{opacity:0}.inline-spoiler-section.unveil{cursor:auto}.inline-spoiler-section.unveil .spoiler-text{background-color:#3333331a}.inline-spoiler-section.unveil .spoiler-text>*{opacity:1}.inline-spoiler-section.unveil .spoiler-img{filter:none}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{color:#222;position:relative;z-index:1}.markdown-body.slides:before{background-color:currentColor;bottom:0;box-shadow:0 0 0 50vw;content:"";display:block;left:0;position:absolute;right:0;top:0;z-index:-1}.markdown-body.slides section[data-markdown]{background-color:#fff;margin-bottom:1.5em;position:relative;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{left:1em;max-height:100%;overflow:hidden;position:absolute;right:1em;top:50%;transform:translateY(-50%)}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{border:3px solid #777;content:"";height:1.5em;position:absolute;right:1em;top:-1.5em}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;-webkit-overflow-scrolling:touch;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;letter-spacing:.025em}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}svg{text-shadow:none}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="Les-formulaire---théorie" data-id="Les-formulaire---théorie"><a class="anchor hidden-xs" href="#Les-formulaire---théorie" title="Les-formulaire---théorie"><span class="octicon octicon-link"></span></a><span>Les formulaire - théorie</span></h1><h2 id="Introduction" data-id="Introduction"><a class="anchor hidden-xs" href="#Introduction" title="Introduction"><span class="octicon octicon-link"></span></a><span>Introduction</span></h2><p><span>Dans ce chapitre nous allons revoir les formulaires que nous avons déjà vu dans le coours sur le HTML.</span></p><p><span>Les chapitres de ce cours seront donc de simples rappel à mise en oeuvre des formulaire en HTML et les différentes balises que l’on peut utiliser à cet effet.</span></p><p><span>Nous verrons par la suite comment les rendres plus attractif en javascript lorsque nous réaliserons les différents cas pratique.</span></p><h2 id="Rappel-sur-les-formulaires" data-id="Rappel-sur-les-formulaires"><a class="anchor hidden-xs" href="#Rappel-sur-les-formulaires" title="Rappel-sur-les-formulaires"><span class="octicon octicon-link"></span></a><span>Rappel sur les formulaires</span></h2><p><strong><span>Formulaire classique :</span></strong></p><p><span>Ici nous verrons comment faire un formulaire classique, basique sans CSS ni rien et dans lequel on va juste faire la sturcture HTML.</span></p><p><span>Pour rappel pour réaliser un formulaire nous devons l’entourer d’une balise </span><code>&lt;form&gt;</code></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    ...
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><strong><span>Les champs input :</span></strong></p><p><span>Donc nous allons à l’intérieur de cette balise </span><code>form</code><span> ajouter des input qui vont nous servir pour recuillir les données. La balise </span><code>&lt;input&gt;</code><span> est une balise qui n’a pas besoin d’être fermé. Elle peut prendre plusieurs attribut, notamment un type qui peut être un type texte, qui est le type de base qui va nous permettre d’entrer du texte à notre formulaire.</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><strong><span>Le bouton :</span></strong></p><p><span>Ensuite, une fois que nous avons notre formulaire nosu avons besoin d’un bouton nous permettant de valider ou d’envoyer les données de notre formulaire.</span></p><p><span>Pour créer un bouton pour les formulaires nous avons deux possibilité :</span></p><ol>
+<li><span>Utilisation de la balise </span><code>&lt;button&gt;...&lt;/button&gt;</code><span>.</span></li>
+<li><span>Utilisation d’un input avec comme type submit.</span></li>
+</ol><p><span>les deux façon de faire son totalement similaire l’une n’ets pas meilleur que l’autre.</span></p><p><strong><span>Cas du bouton</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>button<span class="hljs-operator">&gt;</span>Envoyer<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>button<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><strong><span>Le cas avec un input</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Donc ici nous avons notre premier formulaire de fortune.</span></p><p><span>Le formulaire va automatique détecter lorsque l’utilisateur clique sur un bouton dans un formulaire qu’il souhaite envoyer les données du formulaire.</span></p><p><span>Donc pour rappel un formulaire c’est avant tout une balise englobante, dans laquel on retrouvera des champs, qui peuvent être de type “text” ou autre et à la fin un bouton permettant d’envoyer les données.</span></p><h2 id="les-différents-type-d’input" data-id="les-différents-type-d’input"><a class="anchor hidden-xs" href="#les-différents-type-d’input" title="les-différents-type-d’input"><span class="octicon octicon-link"></span></a><span>les différents type d’input</span></h2><p><span>Nous venons donc de voir l’input de type “text”. Il existe d’autre type de champs pour les formulaire et nous allons, dans cette section, en voir quelques un.</span></p><p><strong><span>Le type email</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"email"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Le type de champ email est lun type plutôt interrassant qui va permettre de définir un champ spécifique pour recevoir des adresses email. Ce type champ va nous permettre d’avoir une première validation sur le champ si l’entrée est un email syntaxiquement valide.</span></p><p><strong><span>Le type password</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"password"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Le champ password est utilisé pour saisir un mot de passe confidentiel qui est masqué à l’utilisateur.</span></p><p><strong><span>le type search</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"search"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Le type “search” est un type de champ de formulaire HTML qui permet à l’utilisateur de saisir une requête de recherche. Il est souvent utilisé dans les formulaires de recherche sur les sites web.</span></p><p><span>Lorsqu’un utilisateur saisit une requête dans un champ de recherche de type “search”, le navigateur affiche souvent une petite croix permettant de supprimer l’entré ou une petite loupe à côté du champ pour indiquer qu’il s’agit d’un champ de recherche.</span></p><p><strong><span>tel</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"tel"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Le type “tel” est utilisé pour demander à l’utilisateur de saisir un numéro de téléphone. Ce champ peut aider à valider les numéros de téléphone et à assurer que les utilisateurs saisissent des numéros de téléphone valides. Les navigateurs mobiles utilisent souvent un clavier numérique lorsqu’un champ “tel” est affiché à l’écran.</span></p><p><span>Le comportement par défaut de ce type de champ peut varier selon les navigateurs et les systèmes d’exploitation, mais il est souvent associé à des fonctionnalités supplémentaires, telles que la possibilité de passer un appel téléphonique en cliquant sur un bouton ou la possibilité d’ajouter le numéro de téléphone dans les contacts de l’utilisateur</span></p><p><strong><span>Le type url</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"url"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Le type “url” est un type de champ de formulaire en HTML qui permet à l’utilisateur de saisir une URL (Uniform Resource Locator). Le champ de saisie est validé automatiquement pour s’assurer qu’il contient une URL valide, c’est-à-dire une adresse web commençant par </span><code>http://</code><span> ou </span><code>https://</code><span>.</span></p><p><span>Ce type de champ est souvent utilisé dans les formulaires de contact ou de commentaire pour permettre aux utilisateurs de saisir des liens vers des pages web pertinentes.</span></p><p><strong><span>Le type date</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"date"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Le type de champ “date” est utilisé dans les formulaires HTML pour permettre aux utilisateurs de saisir des dates.</span></p><p><span>Ce champ affiche un calendrier qui permet aux utilisateurs de sélectionner facilement une date à partir de laquelle les données sont entrées.</span></p><p><span>Le format de la date peut être spécifié à l’aide de l’attribut “format” et l’attribut “min” et “max” peut être utilisé pour définir une plage de dates valides.</span></p><p><strong><span>Le type month</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"month"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Le type “month” est un type de champ pour les formulaires HTML qui permet à l’utilisateur de saisir un mois et une année, sans indication de jour.</span></p><p><span>Le champ permet d’afficher un calendrier déroulant avec des options pour le mois et l’année.</span></p><p><span>Lorsqu’une valeur est soumise, elle est envoyée au serveur sous forme d’une chaîne de caractères au format “AAAA-MM”, où AAAA est l’année et MM est le mois (par exemple, “2023-03” pour mars 2023).</span></p><p><strong><span>Le type number</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"number"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Le champ number est utilisé pour saisir une valeur numérique. Il peut être configuré pour spécifier une plage de valeurs autorisées, une valeur par défaut, etc. le type number peut prendre des attributs tel que </span><code>min</code><span> et </span><code>max</code><span> pour définir les valeurs minimal et maximal du champ.</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"number"</span> min<span class="hljs-operator">=</span><span class="hljs-string">"1"</span> max<span class="hljs-operator">=</span><span class="hljs-string">"10"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><strong><span>Le type range</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"range"</span> min<span class="hljs-operator">=</span><span class="hljs-string">"0"</span> max<span class="hljs-operator">=</span><span class="hljs-string">"100"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"50"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Permet de sélectionner une valeur numérique dans une plage donnée, généralement en utilisant un curseur ou une barre de défilement.</span></p><p><span>Voici un exemple de code HTML pour créer un champ de formulaire de type “range” avec une valeur minimale de 0 et une valeur maximale de 100, et une valeur initiale de 50 :</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span></div><div class="code"><span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"range"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"rangeInput"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"rangeInput"</span> min<span class="hljs-operator">=</span><span class="hljs-string">"0"</span> max<span class="hljs-operator">=</span><span class="hljs-string">"100"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"50"</span><span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Lorsque l’utilisateur interagit avec le champ de formulaire, la valeur sélectionnée sera renvoyée sous forme de nombre entier entre la valeur minimale et la valeur maximale. Dans cet exemple, la valeur sélectionnée peut être n’importe quel nombre entier entre 0 et 100.</span></p><p><strong><span>Un peut de javascript</span></strong></p><p><span>Arrêtons nous un peut sur ce type pour faire un peu de JS afin de nous permettre d’afficher la valeur numérique de notre champ.</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"range"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"rangeInput"</span> min<span class="hljs-operator">=</span><span class="hljs-string">"0"</span> max<span class="hljs-operator">=</span><span class="hljs-string">"100"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"50"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>p id<span class="hljs-operator">=</span><span class="hljs-string">"resultat"</span><span class="hljs-operator">&gt;</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>p<span class="hljs-operator">&gt;</span>
+
+<span class="hljs-operator">&lt;</span>script<span class="hljs-operator">&gt;</span>
+    let resultat <span class="hljs-operator">=</span> document.getElementById(<span class="hljs-string">"resultat"</span>);
+    let rangeInput <span class="hljs-operator">=</span> document.getElementById(<span class="hljs-string">"rangeInput"</span>);
+    
+    rangeinput.oninput <span class="hljs-operator">=</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        resultat.textContent <span class="hljs-operator">=</span> rangeInput.<span class="hljs-built_in">value</span>;
+    }
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>script<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Le code HTML crée un formulaire avec un champ de type “range” et un bouton de soumission. Le champ de type “range” permet de sélectionner une valeur numérique dans un intervalle donné (ici de 0 à 100 avec une valeur par défaut de 50).</span></p><p><span>Le code JavaScript récupère les éléments HTML avec les identifiants “resultat” et “rangeInput” en utilisant la méthode </span><code>getElementById()</code><span>.</span></p><p><span>Il crée ensuite un gestionnaire d’événements qui se déclenche lorsque la valeur du champ “rangeInput” change.</span></p><p><span>À chaque changement de valeur, la fonction affectée à la propriété oninput du champ “rangeInput” met à jour le contenu de l’élément HTML “resultat” avec la nouvelle valeur du champ “rangeInput”.</span></p><p><span>Ainsi, lorsque l’utilisateur déplace le curseur du champ “rangeInput”, la nouvelle valeur sélectionnée est affichée en temps réel dans l’élément HTML “resultat”.</span></p><p><strong><span>Les labels</span></strong><br>
+<span>parton du formulaire rudimentaire suivant :</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>br<span class="hljs-operator">&gt;</span><span class="hljs-operator">&lt;</span>br<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Les labels de formulaire en HTML sont des éléments qui permettent d’associer un libellé à un champ de formulaire, comme un champ de texte, un bouton radio ou une case à cocher. Les labels améliorent l’accessibilité des formulaires en permettant aux utilisateurs de cliquer sur le libellé pour sélectionner le champ de formulaire associé, plutôt que de devoir cliquer précisément sur le champ de formulaire lui-même.</span></p><p><span>Pour créer un label, on utilise l’élément HTML </span><code>&lt;label&gt;</code><span> et on l’associe au champ de formulaire avec l’attribut </span><code>for</code><span> qui a pour valeur l’identifiant unique du champ.</span></p><p><strong><span>Voici un exemple :</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"nom"</span><span class="hljs-operator">&gt;</span>Nom :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"nom"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"nom"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>br<span class="hljs-operator">&gt;</span><span class="hljs-operator">&lt;</span>br<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Dans cet exemple, le label “Nom :” est associé au champ de texte grâce à l’attribut for=“nom”, qui correspond à l’attribut id=“nom” du champ de texte.</span></p><h2 id="Les-attributs-des-inputs" data-id="Les-attributs-des-inputs"><a class="anchor hidden-xs" href="#Les-attributs-des-inputs" title="Les-attributs-des-inputs"><span class="octicon octicon-link"></span></a><span>Les attributs des inputs</span></h2><p><strong><span>l’attribut name</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"nom"</span><span class="hljs-operator">&gt;</span>Nom :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"nom"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"nom"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>br<span class="hljs-operator">&gt;</span><span class="hljs-operator">&lt;</span>br<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>L’attribut name d’un élément </span><code>input</code><span> en HTML est utilisé pour spécifier le nom de l’élément qui sera envoyé avec le formulaire lors de la soumission. Lorsqu’un formulaire est soumis, les valeurs des éléments de formulaire sont envoyées au serveur sous forme de paires clé-valeur. Le nom de l’élément est utilisé comme clé et la valeur saisie dans l’élément est utilisée comme valeur.</span></p><p><span>L’attribut name est également utilisé pour lier un label à son élément de formulaire associé. En associant le name de l’élément avec le for de l’élément label, un clic sur le label provoque le focus de l’élément de formulaire associé.</span></p><p><strong><span>L’attribue value</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"nom"</span><span class="hljs-operator">&gt;</span>Nom :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"nom"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"nom"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Jhon"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>br<span class="hljs-operator">&gt;</span><span class="hljs-operator">&lt;</span>br<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>L’attribut value dans la balise </span><code>input</code><span> est utilisé pour spécifier la valeur initiale d’un champ de formulaire. Lorsqu’un utilisateur soumet un formulaire, la valeur de l’attribut value sera incluse dans les données envoyées au serveur.</span></p><p><span>Par exemple, si vous avez un champ de formulaire de type text comme celui-ci :</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span></div><div class="code"><span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"username"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"John"</span><span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Lorsque le formulaire est soumis, la valeur “John” sera envoyée au serveur en même temps que le nom de l’entrée “username”.</span></p><p><span>L’attribut value peut être utilisé avec plusieurs types de champs de formulaire, tels que text, password, radio, checkbox, hidden, button, submit, reset, image, file, date, color, etc.</span></p><p><span>Notez que si un utilisateur modifie la valeur d’un champ de formulaire, la valeur de l’attribut value ne sera pas mise à jour automatiquement. Si vous voulez récupérer la valeur actuelle d’un champ de formulaire, vous devez utiliser le DOM pour accéder à la propriété value de l’élément.</span></p><p><strong><span>L’attribut placeholder</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"nom"</span><span class="hljs-operator">&gt;</span>Nom :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"nom"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"nom"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Jhon"</span> placeholder<span class="hljs-operator">=</span><span class="hljs-string">"Votre nom ici"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>br<span class="hljs-operator">&gt;</span><span class="hljs-operator">&lt;</span>br<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Envoyer"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>L’attribut placeholder d’un élément input est utilisé pour afficher un texte d’exemple dans l’élément de formulaire lorsqu’aucune valeur n’est saisie.</span></p><p><span>Il est souvent utilisé pour donner des indications aux utilisateurs sur le format ou le type de données attendus dans l’élément de formulaire.</span></p><p><span>Par exemple, si vous avez un champ de saisie d’adresse e-mail, vous pouvez utiliser l’attribut placeholder pour donner un exemple de format d’e-mail, tel que “</span><a href="mailto:votre_email@example.com" target="_blank" rel="noopener"><span>votre_email@example.com</span></a><span>”.</span></p><p><span>Voici un exemple d’utilisation de l’attribut placeholder pour un champ de saisie d’adresse e-mail :</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span></div><div class="code"><span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"email"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"email"</span> placeholder<span class="hljs-operator">=</span><span class="hljs-string">"Entrez votre adresse e-mail"</span><span class="hljs-operator">&gt;</span>
+</div></div></code></pre><h2 id="Textarea-select-et-datalist" data-id="Textarea-select-et-datalist"><a class="anchor hidden-xs" href="#Textarea-select-et-datalist" title="Textarea-select-et-datalist"><span class="octicon octicon-link"></span></a><span>Textarea, select et datalist</span></h2><p><strong><span>textarea</span></strong></p><p><code>&lt;textarea&gt;</code><span> est une balise HTML qui permet de créer un champ de texte multi-lignes dans un formulaire. Il est principalement utilisé pour permettre aux utilisateurs de saisir des commentaires, des messages ou d’autres types de données textuelles.</span></p><p><span>La syntaxe de base pour créer un champ textarea est la suivante :</span></p><pre><code class="htmlembedded hljs"><span class="hljs-operator">&lt;</span>textarea name<span class="hljs-operator">=</span><span class="hljs-string">"nom-du-champ"</span> rows<span class="hljs-operator">=</span><span class="hljs-string">"nombre-de-lignes"</span> cols<span class="hljs-operator">=</span><span class="hljs-string">"nombre-de-colonnes"</span><span class="hljs-operator">&gt;</span>valeur<span class="hljs-operator">-</span>par<span class="hljs-operator">-</span>défaut<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>textarea<span class="hljs-operator">&gt;</span>
+</code></pre><p><span>L’attribut name définit le nom du champ qui sera envoyé au serveur lors de la soumission du formulaire.</span><br>
+<span>Les attributs rows et cols spécifient respectivement le nombre de lignes et de colonnes que le champ textarea doit afficher.</span><br>
+<span>La valeur par défaut du champ textarea peut être définie entre les balises </span><code>&lt;textarea&gt;</code><span> et </span><code>&lt;/textarea&gt;</code><span>.</span><br>
+<strong><span>Exemple :</span></strong></p><pre><code class="htmlembedded hljs"><span class="hljs-operator">&lt;</span>textarea name<span class="hljs-operator">=</span><span class="hljs-string">"message"</span> rows<span class="hljs-operator">=</span><span class="hljs-string">"4"</span> cols<span class="hljs-operator">=</span><span class="hljs-string">"50"</span> placeholder<span class="hljs-operator">=</span><span class="hljs-string">"Saisissez votre message ici"</span><span class="hljs-operator">&gt;</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>textarea<span class="hljs-operator">&gt;</span>
+</code></pre><p><span>Dans cet exemple, nous avons créé un champ textarea nommé “message” qui affiche 4 lignes et 50 colonnes et qui a un texte d’aide de saisie (placeholder) “Saisissez votre message ici”.</span></p><p><strong><span>L’élément select</span></strong></p><p><code>&lt;select&gt;</code><span> est une balise HTML qui permet de créer une liste déroulante (dropdown) dans un formulaire. Elle est souvent utilisée pour les menus déroulants ou pour les listes de choix dans les formulaires. Les options de la liste sont définies par des balises </span><code>&lt;option&gt;</code><span> qui sont des enfants de la balise </span><code>&lt;select&gt;</code><span>.</span></p><p><strong><span>Exemple :</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"pays"</span><span class="hljs-operator">&gt;</span>Pays :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>select id<span class="hljs-operator">=</span><span class="hljs-string">"pays"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"pays"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"france"</span><span class="hljs-operator">&gt;</span>France<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"espagne"</span><span class="hljs-operator">&gt;</span>Espagne<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"italie"</span><span class="hljs-operator">&gt;</span>Italie<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"portugal"</span><span class="hljs-operator">&gt;</span>Portugal<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"allemagne"</span><span class="hljs-operator">&gt;</span>Allemagne<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>select<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Dans cet exemple, la balise </span><code>&lt;select&gt;</code><span> définit une liste déroulante pour les pays et chaque option est définie par une balise </span><code>&lt;option&gt;</code><span> avec la valeur correspondante dans l’attribut value et le texte affiché dans l’option entre les balises ouvrantes et fermantes.</span></p><p><span>On peut ajouter dans l’une des optiosn d’un élément select l’attribut selected, pour que cette option soit sélectionné par défaut.</span></p><p><strong><span>l’élément optgroup de select</span></strong></p><p><span>L’élément </span><code>optgroup</code><span> est utilisé dans un élément </span><code>select</code><span> pour grouper les options en catégories. Cela permet d’organiser les options en sous-groupes logiques, ce qui peut faciliter la sélection de l’utilisateur.</span></p><p><span>L’élément </span><code>optgroup</code><span> doit être placé à l’intérieur d’un élément </span><code>select</code><span> et doit contenir un ou plusieurs éléments </span><code>option</code><span>. Il peut également avoir un attribut </span><code>label</code><span> qui spécifie le nom du groupe.</span></p><p><strong><span>Voici un exemple d’utilisation de </span><code>optgroup</code><span> :</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"fruits"</span><span class="hljs-operator">&gt;</span>Choisissez un fruit :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>select id<span class="hljs-operator">=</span><span class="hljs-string">"fruits"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>optgroup label<span class="hljs-operator">=</span><span class="hljs-string">"Fruits rouges"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"fraise"</span><span class="hljs-operator">&gt;</span>Fraise<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"framboise"</span><span class="hljs-operator">&gt;</span>Framboise<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"cerise"</span><span class="hljs-operator">&gt;</span>Cerise<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>optgroup<span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>optgroup label<span class="hljs-operator">=</span><span class="hljs-string">"Fruits jaunes"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"banane"</span><span class="hljs-operator">&gt;</span>Banane<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"ananas"</span><span class="hljs-operator">&gt;</span>Ananas<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"mangue"</span><span class="hljs-operator">&gt;</span>Mangue<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>optgroup<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>select<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Dans cet exemple, les options sont organisées en deux groupes, “Fruits rouges” et “Fruits jaunes”, pour aider l’utilisateur à sélectionner le fruit qu’il recherche plus facilement.</span></p><p><strong><span>Les datalist</span></strong><br>
+<code>&lt;datalist&gt;</code><span> est une balise HTML qui permet de proposer une liste de choix pour un champ de formulaire, mais contrairement à </span><code>&lt;select&gt;</code><span>, la liste n’est pas déroulante. Elle est souvent utilisée pour les champs de recherche ou de suggestion. Les options de la liste sont définies par des balises </span><code>&lt;option&gt;</code><span> qui sont des enfants de la balise </span><code>&lt;datalist&gt;</code><span>.</span></p><p><strong><span>Exemple :</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"ville"</span><span class="hljs-operator">&gt;</span>Ville :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"ville"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"ville"</span> list<span class="hljs-operator">=</span><span class="hljs-string">"villes"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>datalist id<span class="hljs-operator">=</span><span class="hljs-string">"villes"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"Paris"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"Lyon"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"Marseille"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"Toulouse"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"Bordeaux"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>datalist<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Dans cet exemple, la balise </span><code>&lt;input&gt;</code><span> définit un champ de texte pour la ville avec un attribut list qui fait référence à la balise </span><code>&lt;datalist&gt;</code><span> qui contient les options de la liste de choix. Les options sont définies par des balises </span><code>&lt;option&gt;</code><span> avec la valeur correspondante dans l’attribut value. Lorsque l’utilisateur commence à taper dans le champ de texte, une liste de suggestions basée sur les options de la balise </span><code>&lt;datalist&gt;</code><span> apparaît.</span></p><h2 id="Checkbox-radio-et-color" data-id="Checkbox-radio-et-color"><a class="anchor hidden-xs" href="#Checkbox-radio-et-color" title="Checkbox-radio-et-color"><span class="octicon octicon-link"></span></a><span>Checkbox, radio et color</span></h2><p><span>Les checkboxes, les radios et les inputs de type “color” sont tous des types d’éléments de formulaire en HTML.</span></p><p><strong><span>Checkbox :</span></strong><span> Une checkbox permet à l’utilisateur de sélectionner une ou plusieurs options à partir d’un ensemble d’options. Elle est représentée par une case à cocher. Lorsqu’une case est cochée, la valeur correspondante est envoyée lors de la soumission du formulaire. Elle est créée en utilisant l’élément </span><code>&lt;input&gt;</code><span> avec un attribut </span><code>type="checkbox"</code><span>.</span></p><p><strong><span>Exemple :</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"fruits"</span><span class="hljs-operator">&gt;</span>Quels fruits aimez<span class="hljs-operator">-</span>vous ?<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"checkbox"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"fruits"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"orange"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"orange"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"orange"</span><span class="hljs-operator">&gt;</span>Orange<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"checkbox"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"fruits"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"pomme"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"pomme"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"pomme"</span><span class="hljs-operator">&gt;</span>Pomme<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><strong><span>Radio :</span></strong><span> Les boutons radio permettent à l’utilisateur de sélectionner une seule option à partir d’un ensemble d’options. Chaque bouton radio doit avoir le même nom, mais une valeur différente. Elle est créée en utilisant l’élément </span><code>&lt;input&gt;</code><span> avec un attribut </span><code>type="radio"</code><span>.</span><br>
+<span>Exemple :</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"sexe"</span><span class="hljs-operator">&gt;</span>Quel est votre sexe ?<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"radio"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"sexe"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"homme"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"homme"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"homme"</span><span class="hljs-operator">&gt;</span>Homme<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"radio"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"sexe"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"femme"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"femme"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"femme"</span><span class="hljs-operator">&gt;</span>Femme<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><strong><span>Color :</span></strong><span> L’input de type “color” permet à l’utilisateur de choisir une couleur à partir d’une palette de couleurs. Elle est créée en utilisant l’élément </span><code>&lt;input&gt;</code><span> avec un attribut </span><code>type="color"</code><span>.</span></p><p><strong><span>Exemple :</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"couleur"</span><span class="hljs-operator">&gt;</span>Choisissez une couleur :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"color"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"couleur"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"couleur"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"#ff0000"</span><span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Notez que les valeurs de ces éléments de formulaire seront envoyées dans le corps de la requête HTTP lors de la soumission du formulaire.</span></p><h2 id="Les-champs-actions-et-method" data-id="Les-champs-actions-et-method"><a class="anchor hidden-xs" href="#Les-champs-actions-et-method" title="Les-champs-actions-et-method"><span class="octicon octicon-link"></span></a><span>Les champs actions et method</span></h2><p><span>Les attributs action et method sont utilisés pour définir où et comment envoyer les données d’un formulaire HTML lorsqu’il est soumis.</span></p><p><span>L’attribut action est utilisé pour spécifier l’URL de destination où les données du formulaire doivent être envoyées. Par exemple, si vous souhaitez envoyer les données à un fichier PHP nommé “traitement.php”, vous pouvez définir l’attribut action de la balise </span><code>&lt;form&gt;</code><span> comme suit :</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form action<span class="hljs-operator">=</span><span class="hljs-string">"traitement.php"</span><span class="hljs-operator">&gt;</span>
+ 
+</div></div></code></pre><p><span>L’attribut method est utilisé pour spécifier la méthode HTTP à utiliser lors de l’envoi des données du formulaire. La méthode par défaut est GET, mais il est souvent préférable d’utiliser POST, car elle est plus sûre et plus adaptée à l’envoi de données sensibles.</span></p><p><span>Voici un exemple de formulaire avec les attributs action et method :</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form action<span class="hljs-operator">=</span><span class="hljs-string">"traitement.php"</span> method<span class="hljs-operator">=</span><span class="hljs-string">"post"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>label<span class="hljs-operator">&gt;</span>
+    Nom :
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"nom"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>label<span class="hljs-operator">&gt;</span>
+    Prénom :
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"prenom"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>button <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span><span class="hljs-operator">&gt;</span>Envoyer<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>button<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Dans cet exemple, les données du formulaire seront envoyées à la page “traitement.php” avec la méthode HTTP POST lorsque l’utilisateur soumettra le formulaire en cliquant sur le bouton “Envoyer”.</span></p><h2 id="Les-méthode-GET-et-POST" data-id="Les-méthode-GET-et-POST"><a class="anchor hidden-xs" href="#Les-méthode-GET-et-POST" title="Les-méthode-GET-et-POST"><span class="octicon octicon-link"></span></a><span>Les méthode GET et POST</span></h2><p><span>Les requêtes </span><code>GET</code><span> et </span><code>POST</code><span> sont les deux méthodes HTTP les plus couramment utilisées pour envoyer des données à partir d’un formulaire HTML.</span></p><p><span>La méthode </span><code>GET</code><span> est utilisée pour demander des ressources au serveur en envoyant des paramètres dans l’URL de la requête. Les données sont visibles dans l’URL, donc elle n’est pas recommandée pour l’envoi de données sensibles telles que les mots de passe.</span></p><p><strong><span>Exemple de formulaire </span><code>GET</code><span>:</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form action<span class="hljs-operator">=</span><span class="hljs-string">"search.php"</span> method<span class="hljs-operator">=</span><span class="hljs-string">"get"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"query"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"submit"</span> value<span class="hljs-operator">=</span><span class="hljs-string">"Rechercher"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>La méthode </span><code>POST</code><span>, quant à elle, est utilisée pour envoyer des données au serveur dans le corps de la requête HTTP. Les données ne sont pas visibles dans l’URL, donc elle est plus sûre pour l’envoi de données sensibles.</span></p><p><strong><span>Exemple de formulaire </span><code>POST</code><span>:</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code">&lt;<span class="hljs-keyword">form</span> action=<span class="hljs-string">"signup.php"</span> method=<span class="hljs-string">"post"</span>&gt;
+  &lt;<span class="hljs-keyword">label</span>&gt;Nom <span class="hljs-keyword">d</span>'utilisateur:&lt;/<span class="hljs-keyword">label</span>&gt;
+  &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"text"</span> name=<span class="hljs-string">"username"</span>&gt;
+  &lt;<span class="hljs-keyword">br</span>&gt;
+  &lt;<span class="hljs-keyword">label</span>&gt;Mot <span class="hljs-keyword">de</span> passe:&lt;/<span class="hljs-keyword">label</span>&gt;
+  &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"password"</span> name=<span class="hljs-string">"password"</span>&gt;
+  &lt;<span class="hljs-keyword">br</span>&gt;
+  &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"submit"</span> value=<span class="hljs-string">"S'inscrire"</span>&gt;
+&lt;/<span class="hljs-keyword">form</span>&gt;
+</div></div></code></pre><p><span>Il est important de noter que les requêtes </span><code>GET</code><span> sont plus rapides à traiter et plus simples à utiliser, tandis que les requêtes </span><code>POST</code><span> sont plus sûres pour l’envoi de données sensibles et peuvent envoyer plus de données que les requêtes </span><code>GET</code><span>. Dans la plupart des cas, la méthode </span><code>GET</code><span> est utilisée pour récupérer des ressources, tandis que la méthode </span><code>POST</code><span> est utilisée pour envoyer des données à un serveur.</span></p><h2 id="La-validation" data-id="La-validation"><a class="anchor hidden-xs" href="#La-validation" title="La-validation"><span class="octicon octicon-link"></span></a><span>La validation</span></h2><p><span>Maintenant que nous avons toute la partie input et tout les champs pour nos formulaire, nous allons à présent voir comment faire de la validation de données sur ceci.</span></p><p><span>Dans cette section nous verrons comment gérer par exemple le nombre de caractères que l’on peut mettre dasn un input ou dans un mot de passe par exemple, etc…</span></p><p><span>Pour illustrer tout cela nous allons créer un petit formulaire.</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"email"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>button<span class="hljs-operator">&gt;</span>Envoyer<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>button<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Ici nous avons un input de type email. On peut observer que ce type de champ est automatiquement valider par le navigateur. Par exemple si l’utilisateur entre du texte qui n’a pas la syntaxe d’un email alors un message s’affiche lorsqu’on tente de valider le formulaire.</span></p><p><span>Le type de champ number aussi propose une validation qui va empêcher l’utilisateur d’écrire du texte dans le champ mais uniquement des valeurs numérique.</span></p><p><strong><span>Pour le type “text”</span></strong></p><p><strong><span>required :</span></strong><span> le champ est obligatoire</span><br>
+<strong><span>minlength :</span></strong><span> nombre minimum de caractères autorisés</span><br>
+<strong><span>maxlength :</span></strong><span> nombre maximum de caractères autorisés</span><br>
+<strong><span>pattern :</span></strong><span> une expression régulière qui doit être respectée</span></p><p><strong><span>Pour le type “number”</span></strong></p><p><strong><span>required :</span></strong><span> le champ est obligatoire</span><br>
+<strong><span>min :</span></strong><span> valeur minimale autorisée</span><br>
+<strong><span>max :</span></strong><span> valeur maximale autorisée</span><br>
+<strong><span>step :</span></strong><span> pas entre les valeurs autorisées</span></p><p><strong><span>Pour le type “email”</span></strong></p><p><strong><span>required :</span></strong><span> le champ est obligatoire</span><br>
+<strong><span>pattern :</span></strong><span> une expression régulière qui doit être respectée pour une adresse email valide</span></p><p><strong><span>Pour le type “password”</span></strong></p><p><strong><span>required :</span></strong><span> le champ est obligatoire</span><br>
+<strong><span>minlength :</span></strong><span> nombre minimum de caractères autorisés</span><br>
+<strong><span>maxlength :</span></strong><span> nombre maximum de caractères autorisés</span><br>
+<strong><span>pattern :</span></strong><span> une expression régulière qui doit être respectée</span></p><p><strong><span>Pour le type “date”</span></strong></p><p><strong><span>required :</span></strong><span> le champ est obligatoire</span><br>
+<strong><span>min :</span></strong><span> valeur minimale autorisée</span><br>
+<strong><span>max :</span></strong><span> valeur maximale autorisée</span></p><p><strong><span>Pour le type “checkbox”</span></strong></p><p><strong><span>required :</span></strong><span> au moins une case doit être cochée</span><br>
+<strong><span>min :</span></strong><span> nombre minimum de cases qui doivent être cochées</span><br>
+<strong><span>max :</span></strong><span> nombre maximum de cases qui peuvent être cochées</span></p><p><strong><span>Pour le type “radio”</span></strong></p><p><strong><span>required :</span></strong><span> au moins une option doit être sélectionnée</span></p><p><span>Pour le type “file” :</span></p><p><strong><span>required :</span></strong><span> le champ est obligatoire</span><br>
+<strong><span>accept :</span></strong><span> les types de fichiers autorisés</span></p><p><strong><span>Pour le type “color”</span></strong></p><p><strong><span>required :</span></strong><span> le champ est obligatoire</span></p><h2 id="Cas-d’utilisation-pour-chaque-type" data-id="Cas-d’utilisation-pour-chaque-type"><a class="anchor hidden-xs" href="#Cas-d’utilisation-pour-chaque-type" title="Cas-d’utilisation-pour-chaque-type"><span class="octicon octicon-link"></span></a><span>Cas d’utilisation pour chaque type</span></h2><p><strong><span>required :</span></strong><span> Cet attribut permet de rendre obligatoire le remplissage d’un champ. Si l’utilisateur essaie de soumettre le formulaire sans remplir ce champ, une erreur sera affichée.</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"nom"</span><span class="hljs-operator">&gt;</span>Nom :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"nom"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"nom"</span> required<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><strong><span>pattern :</span></strong><span> cet attribut permet de définir une expression régulière qui sera utilisée pour valider le contenu d’un champ. Si le contenu du champ ne correspond pas à l’expression régulière, une erreur sera affichée.</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"email"</span><span class="hljs-operator">&gt;</span>Adresse e<span class="hljs-operator">-</span>mail :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"email"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"email"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"email"</span> required pattern<span class="hljs-operator">=</span><span class="hljs-string">"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"</span><span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><strong><span>Autre exemple de pattern</span></strong></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"password"</span><span class="hljs-operator">&gt;</span>Mot de passe:<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"password"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"password"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"password"</span> pattern<span class="hljs-operator">=</span><span class="hljs-string">"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"</span> required<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Dans cet exemple, l’attribut </span><code>pattern</code><span> est utilisé pour définir une expression régulière qui décrit les caractères autorisés pour le mot de passe. L’expression régulière utilisée est </span><code>^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$</code><span>, qui exige que le mot de passe contienne au moins une lettre minuscule, une lettre majuscule et un chiffre, et qu’il ait une longueur d’au moins 8 caractères.</span></p><p><span>L’attribut </span><code>required</code><span> est également utilisé pour indiquer que ce champ est obligatoire et doit être rempli avant de soumettre le formulaire.</span></p><p><strong><span>min et max :</span></strong><span> ces attributs permettent de définir des valeurs minimales et maximales pour un champ numérique.</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"age"</span><span class="hljs-operator">&gt;</span>Âge :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"number"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"age"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"age"</span> min<span class="hljs-operator">=</span><span class="hljs-string">"18"</span> max<span class="hljs-operator">=</span><span class="hljs-string">"99"</span> required<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><strong><span>minlength et maxlength :</span></strong><span> ces attributs permettent de définir des longueurs minimales et maximales pour un champ de texte.</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"commentaire"</span><span class="hljs-operator">&gt;</span>Commentaire :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>textarea name<span class="hljs-operator">=</span><span class="hljs-string">"commentaire"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"commentaire"</span> rows<span class="hljs-operator">=</span><span class="hljs-string">"5"</span> cols<span class="hljs-operator">=</span><span class="hljs-string">"30"</span> minlength<span class="hljs-operator">=</span><span class="hljs-string">"10"</span> maxlength<span class="hljs-operator">=</span><span class="hljs-string">"1000"</span><span class="hljs-operator">&gt;</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>textarea<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><strong><span>step :</span></strong><span> cet attribut permet de définir un intervalle de valeurs pour un champ numérique.</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"prix"</span><span class="hljs-operator">&gt;</span>Prix :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"number"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"prix"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"prix"</span> min<span class="hljs-operator">=</span><span class="hljs-string">"0"</span> step<span class="hljs-operator">=</span><span class="hljs-string">"0.01"</span> required<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><strong><span>autocomplete :</span></strong><span> cet attribut permet de définir si le navigateur doit ou non proposer des suggestions de saisie pour un champ.</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"adresse"</span><span class="hljs-operator">&gt;</span>Adresse :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"adresse"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"adresse"</span> autocomplete<span class="hljs-operator">=</span><span class="hljs-string">"street-address"</span><span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><strong><span>list :</span></strong><span> cet attribut permet de lier un champ à une liste d’options définie ailleurs dans le formulaire.</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"fruit"</span><span class="hljs-operator">&gt;</span>Fruit préféré :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> name<span class="hljs-operator">=</span><span class="hljs-string">"fruit"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"fruit"</span> list<span class="hljs-operator">=</span><span class="hljs-string">"fruits-list"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>datalist id<span class="hljs-operator">=</span><span class="hljs-string">"fruits-list"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"Pomme"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"Banane"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"Orange"</span><span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"Poire"</span><span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>datalist<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><strong><span>multiple :</span></strong><span> cet attribut permet de permettre la sélection de plusieurs options dans une liste déroulante ou une liste à choix multiple.</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>label <span class="hljs-keyword">for</span><span class="hljs-operator">=</span><span class="hljs-string">"couleur"</span><span class="hljs-operator">&gt;</span>Couleur(s) préférée(s) :<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>label<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span>select name<span class="hljs-operator">=</span><span class="hljs-string">"couleur"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"couleur"</span> multiple<span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"rouge"</span><span class="hljs-operator">&gt;</span>Rouge<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"vert"</span><span class="hljs-operator">&gt;</span>Vert<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"bleu"</span><span class="hljs-operator">&gt;</span>Bleu<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+  <span class="hljs-operator">&lt;</span>option value<span class="hljs-operator">=</span><span class="hljs-string">"jaune"</span><span class="hljs-operator">&gt;</span>Jaune<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>option<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>select<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><strong><span>petites astuces :</span></strong></p><p><span>Lorsque des attribut de validation son positionné sur un champ input cela donne accès en CSS à deux pseudos classe qui sont la classe valid et invalid.</span></p><p><span>Sur ces pseudo classe nous pouvons très bien appliqué un style. Par exemple :</span></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:invalid</span> {
+    <span class="hljs-attribute">border</span>: solid <span class="hljs-number">1px</span> red;
+}
+
+<span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:valid</span> {
+    <span class="hljs-attribute">border</span>: solid <span class="hljs-number">1px</span> green;
+}
+</div></div></code></pre><p><span>Ce qui aura pour effet de de donner un contour rouge au champ qui n’on pas été validé et un contour vert au champ qui sont valide.</span></p><p><span>On peut aussi utiliser la propriété outline qui va nous permettre de retire le contour surbrillant (bleu en général) lorsqu’on clique sur le champ.</span></p><pre><code class="css hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-selector-tag">input</span> {
+    <span class="hljs-attribute">outline</span>: none;
+}
+</div></div></code></pre><p><span>Il est aussi possible de changer le texte à l’interieur de la boite de dialogue qui apparait lorsque le champ n’est pas valide.</span></p><p><span>Prenons le cas d’un champ text simple avec un attribut required et un pattern  qui impose des caractères de a à z en minuscule et des chiffres et une taille max de 6 caractères.</span></p><p><span>Ce qui nous donnerait le formulaire suivant :</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>form<span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>input <span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-string">"text"</span> id<span class="hljs-operator">=</span><span class="hljs-string">"inpTxt"</span> required pattern<span class="hljs-operator">=</span><span class="hljs-string">"[a-z0-9]{6,}"</span><span class="hljs-operator">&gt;</span>
+    <span class="hljs-operator">&lt;</span>button<span class="hljs-operator">&gt;</span>Valider<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>button<span class="hljs-operator">&gt;</span>
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>form<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Lorsque l’on met des caractères non valide dans notre champ input ici, nous avons un message qui s’affiche dans une boite de dialogue avec le message suivant :</span></p><pre><code class="yaml hljs"><div class="wrapper"><div class="gutter linenumber"><span></span></div><div class="code">Veuillez respecter le format requis.
+</div></div></code></pre><p><span>Nous pouvons décider de changer le message qui s’affiche. Pour cela nous pouvons utiliser le Javascript.</span></p><pre><code class="htmlembedded hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-operator">&lt;</span>script<span class="hljs-operator">&gt;</span>
+    cont monInp <span class="hljs-operator">=</span> document.getElementByid(<span class="hljs-string">'inpTxt'</span>);
+    
+    monInp.setCustomValidity(<span class="hljs-string">'Mon message perso'</span>);
+    
+<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>script<span class="hljs-operator">&gt;</span>
+</div></div></code></pre><p><span>Ce qui affichera à la place du message précédent le nouveau message suivant en cas d’entré de données non valide de l’utilisateur.</span></p><pre><code class="yaml hljs"><div class="wrapper"><div class="gutter linenumber"><span></span></div><div class="code">Mon message perso
+</div></div></code></pre></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li><a href="#Les-formulaire---théorie" title="Les formulaire - théorie">Les formulaire - théorie</a><ul class="nav">
+<li><a href="#Introduction" title="Introduction">Introduction</a></li>
+<li><a href="#Rappel-sur-les-formulaires" title="Rappel sur les formulaires">Rappel sur les formulaires</a></li>
+<li><a href="#les-différents-type-d’input" title="les différents type d’input">les différents type d’input</a></li>
+<li><a href="#Les-attributs-des-inputs" title="Les attributs des inputs">Les attributs des inputs</a></li>
+<li><a href="#Textarea-select-et-datalist" title="Textarea, select et datalist">Textarea, select et datalist</a></li>
+<li><a href="#Checkbox-radio-et-color" title="Checkbox, radio et color">Checkbox, radio et color</a></li>
+<li><a href="#Les-champs-actions-et-method" title="Les champs actions et method">Les champs actions et method</a></li>
+<li><a href="#Les-méthode-GET-et-POST" title="Les méthode GET et POST">Les méthode GET et POST</a></li>
+<li><a href="#La-validation" title="La validation">La validation</a></li>
+<li><a href="#Cas-d’utilisation-pour-chaque-type" title="Cas d’utilisation pour chaque type">Cas d’utilisation pour chaque type</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li><a href="#Les-formulaire---théorie" title="Les formulaire - théorie">Les formulaire - théorie</a><ul class="nav">
+<li><a href="#Introduction" title="Introduction">Introduction</a></li>
+<li><a href="#Rappel-sur-les-formulaires" title="Rappel sur les formulaires">Rappel sur les formulaires</a></li>
+<li><a href="#les-différents-type-d’input" title="les différents type d’input">les différents type d’input</a></li>
+<li><a href="#Les-attributs-des-inputs" title="Les attributs des inputs">Les attributs des inputs</a></li>
+<li><a href="#Textarea-select-et-datalist" title="Textarea, select et datalist">Textarea, select et datalist</a></li>
+<li><a href="#Checkbox-radio-et-color" title="Checkbox, radio et color">Checkbox, radio et color</a></li>
+<li><a href="#Les-champs-actions-et-method" title="Les champs actions et method">Les champs actions et method</a></li>
+<li><a href="#Les-méthode-GET-et-POST" title="Les méthode GET et POST">Les méthode GET et POST</a></li>
+<li><a href="#La-validation" title="La validation">La validation</a></li>
+<li><a href="#Cas-d’utilisation-pour-chaque-type" title="Cas d’utilisation pour chaque type">Cas d’utilisation pour chaque type</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>

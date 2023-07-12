@@ -1,0 +1,699 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu navigation */
+
+nav {
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    background: linear-gradient(to bottom, #333, #626262);
+    z-index: 10;
+}
+
+.logo-menu {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 50px;
+    z-index: 15;
+    display: none;
+}
+
+.liste-nav {
+    background: linear-gradient(to bottom, #333, #626262);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    z-index: 20;
+}
+
+.item-nav {
+    display: flex;
+    align-items: center;
+}
+
+.item-nav a {
+    color: #f1f1f1;
+    text-decoration: none;
+    margin: 0 20px;
+    text-transform: uppercase;
+}
+
+.item-nav a::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 0%;
+    height: 2px;
+    background: #f1f1f1;
+    transition: width 0.2s ease-in-out;
+}
+
+.item-nav a:hover::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .logo-menu {
+        display: block;
+    }
+
+    .liste-nav {
+        padding-top: 70px;
+        flex-direction: column;
+        height: auto;
+        position: relative;
+        display: none;
+    }
+
+    .liste-nav.active {
+        display: block;
+    }
+
+    .item-nav {
+        height: 70px;
+        justify-content:  center;
+    }
+}
+
+/* Accueil */
+.accueil {
+    height: 100%;
+    width: 100%;
+    background-image: url(img/accueil-pic-lum-down.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 970px;
+    border-bottom: 1px dotted #777;
+    padding-top: 1px;
+}
+
+.logo-kyoto {
+    border-radius: 50%;
+    width: 180px;
+    display: block;
+    margin: 180px auto 0;
+}
+
+.accueil h1 {
+    text-align: center;
+    font-size: 100px;
+    color: #f1f1f1;
+    margin-top: 10px;
+    font-family: Merienda One, sans-serif;
+    text-shadow: 0 0 10px #000;
+}
+
+.sous-titre {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-shadow: 0 0 10px #000;
+    margin: 5px;
+}
+
+.btn-accueil {
+    width: 200px;
+    height: 70px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #f1f1f1;
+    border-radius: 9999px;
+    background: crimson;
+    display: block;
+    line-height: 70px;
+    margin: 30px auto 0;
+    text-align: center;
+    border: 1px solid #333;
+    transition: all 0.2 ease-in-out;
+}
+
+.btn-accueil:hover {
+    background: rgb(177, 0, 36);
+    color: #FFF;
+}
+
+@media screen and (max-width: 850px) {
+    .accueil{
+        height: 650px;
+        min-height: auto;
+        background-position: right;
+    }
+
+    .logo-kyoto {
+        margin: 120px auto 0;
+    }
+
+    .accueil h1 {
+        font-size: 60px;
+    }
+
+    .btn-accueil {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px;
+        margin: 15px auto 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .accueil {
+        height: 550px;
+    }
+
+    .logo-kyoto {
+        width: 120px;
+        margin: 100px auto 0;
+    }
+
+    .accueil h1 {
+        font-size: 35px;
+    }
+
+    .sous-titre {
+        font-size: 20px;
+    }
+
+    .btn-accueil {
+        width: 130px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 16px;
+    }
+
+    .logo-menu {
+        width: 40px;
+        top: 15px;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .logo-kyoto {
+        width: 85px;
+        margin: 70px auto 0;
+    }
+}
+
+/* Section asymétrique */
+
+.section-asymetrique {
+    display: grid;
+    grid-template: 200px repeat(3, auto) / 1fr 600px 1fr;
+    background: #f1f1f1;
+}
+
+.section-asymetrique h2 {
+    grid-area: 1 / 1 / 2 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.bloc-1, .img-grid-1 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.bloc-right, .img-grid-2 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.bloc-3, .img-grid-3 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.bloc {
+    background: #333;
+    color: #F1F1F1;
+    position: relative;
+    border-radius: 2px;
+    height: 750px;
+    margin-bottom: 250px;
+}
+
+.img-grid {
+    width: 500px;
+    height: 700px;
+    object-fit: cover;
+    position: relative;
+}
+
+.img-grid-1, .img-grid-3 {
+    top: 130px;
+    left: 20px;
+}
+
+.bloc-left {
+    left: -300px;
+}
+
+.bloc-text-left {
+    width: 50%;
+    height: 100%;
+}
+
+.bloc-text-left h3 {
+    font-size: 35px;
+    margin: 35px 15px;
+    white-space: nowrap;
+}
+
+.bloc-text-left p {
+    line-height: 40px;
+    padding: 25px;
+}
+
+.bloc button {
+    border-radius: 9999px;
+    outline: none;
+    border: none;
+    background: crimson;
+    border: 1px solid #333;
+    color: #F1F1F1;
+    font-size: 20px;
+    padding: 20px 35px;
+    cursor: pointer;
+    display: block;
+    margin: 35px auto;
+}
+
+
+.bloc-right {
+    right: -300px;
+}
+
+.img-grid-2 {
+    top: 130px;
+    left: 100px;
+}
+
+.bloc-text-right {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.bloc-text-right h3 {
+    position: relative;
+    font-size: 32px;
+    margin: 35px auto;
+}
+
+.bloc-text-right p {
+    line-height: 40px;
+    padding: 25px;
+}
+
+.ligne-gauche {
+    grid-area: 1 / 2 / -1 / 3;
+    border-left: 1px solid #333;
+}
+
+.ligne-droite {
+    grid-area: 1 / 3 / -1 / 4;
+    border-left: 1px solid #333;
+}
+
+@media screen and (max-width: 1200px) {
+    .section-asymetrique {
+        grid-template: 200px repeat(6, auto) 100px / 1fr 600px / 1fr;
+    }
+
+    .section-asymetrique h2 {
+        font-size: 50px;
+        padding-bottom: 0px;
+    }
+    .bloc-1 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .img-grid-1 {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    .bloc-right {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+    .img-grid-2 {
+        grid-area: 5 / 2 / 6 / 3;
+    }
+
+    .bloc-3 {
+        grid-area: 6 / 2 / 7 / 3;
+    }    
+    .img-grid-3 {
+        grid-area: 7 / 2 / 8 / 3;
+    } 
+
+    .bloc {
+        height: 100%;
+        margin-bottom: 0;
+    }
+    
+    .img-grid {
+        position: static;
+        width: 600px;
+        height: 750px;
+    }
+
+    .img-grid-1, .img-grid-3 {
+        top: 0px;
+        left: 0px;
+    }
+
+    .img-grid-2 {
+        top: 0px;
+        left: 0px;
+    }
+
+    .bloc-left {
+        left: 0px;
+    }
+    .bloc-right {
+        left: 0px;
+    }
+
+    .bloc-text-left {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .bloc-text-left h3, .bloc-text-right h3 {
+        text-align: center;
+    }
+
+    .bloc-text-left p, .bloc-text-right p {
+        font-size: 20px;
+        line-height: 1.8;
+        padding: 15px;
+    }
+
+    .bloc button {
+        font-size: 20px;
+        padding: 15px 30px;
+        margin-bottom: 30px;
+    }
+
+    .bloc-text-right {
+        position: static;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-asymetrique {
+        grid-template: 150px repeat(6, auto) 100px / 100%;
+    }
+
+    .ligne-droite, .ligne-gauche {
+        display: none;
+    }
+
+    .section-asymetrique h2 {
+        font-size: 30px;
+    }
+
+    .bloc, .img-grid {
+        grid-area: auto;
+    }
+
+    .img-grid {
+        width: 100%;
+        height: 500px;
+    }
+    
+    .bloc-text-left h3, .bloc-text-right h3 {
+        font-size: 25px;
+    }
+
+    .bloc-text-right {
+        width: 100%;
+    }
+}
+
+/* Section parallax */
+
+.parallax {
+    width: 100%;
+    height: 360px;
+    background: url("img/parallax-large-flou.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.parallax p {
+    font-size: 65px;
+    color: #F1F1F1;
+}
+
+.parallax span {
+    display: block;
+    font-size: 25px;
+    color: #F1F1F1;
+}
+
+@media screen  and (max-width: 400px) {
+    .parallax p {
+        font-size: 55px;
+    }
+}
+@media screen  and (max-width: 330px) {
+    .parallax p {
+        font-size: 50px;
+    }
+}
+
+
+/* Section Tarif */
+
+.section-tarifs {
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #333;
+}
+.section-tarifs h3 {
+    text-align: center;
+    font-size: 45px;
+    margin: 120px 0 20px;
+    padding: 0 30px;
+}
+
+.section-tarifs hr {
+    width: 180px;
+    margin: 20px auto 100px;
+}
+
+.container-tarifs {
+    display: flex;
+    justify-content: center;
+    flex: wrap;
+}
+
+.carte-tarifs {
+    width: 350px;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+.carte-tarifs:hover {
+    transform: translateY(-5px);
+}
+
+.carte-tarifs h4 {
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 35px;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100% ) ;
+    background: #FFAFBF;
+}
+
+.carte-tarifs span {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.carte-tarifs:nth-child(2) h4 {
+    background: #FF5073;
+}
+.carte-tarifs:nth-child(3) h4 {
+    background: #FF0033;
+}
+
+.carte-tarifs p {
+    font-size: 18px;
+    padding: 20px 10px;
+    border-top: 1px solid rgb(194, 197, 194);
+}
+.carte-tarifs p:last-of-type {
+    border-bottom: 1px solid rgb(194, 197, 194);
+}
+.carte-tarifs p {
+    font-size: 18px;
+    padding: 20px 10px;
+    border-top: 1px solid rgb(194, 197, 194);
+}
+
+.carte-tarifs p:nth-child(odd) {
+    background: rgba(195, 195, 195, 0.219);
+}
+
+.carte-tarifs a {
+    display: block;
+    text-decoration: none;
+    border: 1px solid #333;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 9999px;
+    color: #333;
+    font-size: 18px;
+    line-height: 50px;
+    margin: 20px auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.carte-tarifs a:hover {
+    background: #333;
+    color: #F1F1F1;
+}
+
+@media screen and (max-width: 990px) {
+    .section-tarifs h3 {
+        font-size: 35px;
+        margin: 80px 0 20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .section-tarifs h3 {
+        font-size: 30px;
+        margin: 50px 0;
+        padding: 0 10px;
+    }
+    .section-tarifs hr {
+        width: 180px;
+        margin: 20px auto 20px;
+    }
+}
+
+/* Section formulaire de contact */
+
+.section-contact {
+    padding: 100px;
+}
+
+.section-contact h2 {
+    text-align: center;
+    color: #333;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    padding: 70px 0 0 0;
+}
+
+.container-form {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.form-group label {
+    color: #aaa;
+    font-size: 20px;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 3px solid #aaa;
+    color: #666;
+    font-size: 20px
+}
+
+.form-group textarea {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border: 3px solid #aaa;
+    background: #f1f1f1;
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+    font-size: 20px;
+    padding: 5px;
+}
+
+/* .form-group:nth-child(4) {
+    margin-bottom: 25px;
+} */
+
+.form-group .btn-submit {
+    display: block;
+    width: auto;
+    padding: 15px 60px;
+    border: 3px solid rgb(144, 144, 144);
+    border-radius: 9999px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    background-image: linear-gradient(to right, transparent 50%, rgb(65, 65, 65) 50%, rgb(134, 134, 134));
+    background-size: 200%;
+    transition: all 0.4s ease-in-out; 
+}   
+
+.form-group .btn-submit:hover {
+    color: #FFF;
+    background-position: 100%;
+    border: 3px solid #FFF
+}
+
+@media screen and (max-width: 1300px) {
+    .section-contact h2 {
+        padding: 70px 0 0 0; 
+    }
+
+    .container-form {
+        padding-left: 0;
+    }
+}
+
+footer {
+    border-top: 1px solid #333;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}

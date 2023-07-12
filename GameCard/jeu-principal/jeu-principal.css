@@ -1,0 +1,48 @@
+@font-face{
+    font-family:"Beaumont";
+    src: url("../fonts/Catherine.ttf");
+}
+@font-face{
+    font-family:"elgoc";
+    src: url("../fonts/ElgocMedium.woff");
+}
+body{
+    position: relative;
+    background-color: black;
+}
+
+
+.logo{
+    font-family: Beaumont;
+    font-size: 100px;
+    text-align: center;
+    color: white;
+}
+
+
+.cards{
+    text-align: center;
+    margin-top: -250px;
+    
+}
+
+.histoire, .sport, .culture, .sciences{
+    display: inline-block;
+    width:40%;
+    height: 80px;
+    border-radius: 25px;
+    text-align: center;
+    font-family: elgoc;
+    font-size: 35px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+a:visited{
+    color: white;
+}
+a:hover{
+    color: orchid;
+}

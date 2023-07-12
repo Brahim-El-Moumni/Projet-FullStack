@@ -1,0 +1,68 @@
+@font-face{
+    font-family: "Cooper1";
+    src: url("../fonts/cooper.ttf")
+}
+@font-face{
+    font-family:"Beaumont";
+    src: url("../fonts/Catherine.ttf");
+}
+*{
+    font-family: Cooper1;
+    color: white;
+}
+
+html,body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: black;
+}
+
+.home-redirection{
+    /*float: right;
+    margin-right: 30px;
+    margin-top: -100px;*/
+    position: absolute;
+    bottom: 18px;
+    right: 15px;
+}
+.home-redirection a:visited{
+    color: white;
+}
+.home-redirection a:hover{
+    color: #FF00FF;
+}
+
+p{
+    text-align: center;
+    font-size: 34px;
+    font-family: Cooper1;
+}
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+}
+a:hover{
+    color:#ffb143; 
+    
+}
+.img{
+    text-align: center;
+}
+.logo a{
+    font-family: Beaumont;
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+    font-size: 100px;
+    
+}
+.logo a:visited{
+    color: white;
+}
+.logo a:hover{
+    color: #FF00FF;
+}

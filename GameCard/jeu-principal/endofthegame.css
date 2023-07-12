@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "Beaumont";
+    src: url("../fonts/Catherine.ttf");
+}
+
+@font-face {
+    font-family: "elgoc";
+    src: url("../fonts/ElgocMedium.woff");
+}
+
+@font-face {
+    font-family: "cooper";
+    src: url("../fonts/cooper.ttf");
+}
+*{
+    font-family: cooper;
+}
+
+body {
+    background-color: black;
+}
+
+* {
+    color: white;
+}
+
+.logo {
+    font-family: Beaumont;
+    font-size: 100px;
+    text-align: center;
+}
+
+.logo a:visited {
+    color: white;
+}
+
+.logo a:hover {
+    color: orchid;
+}
+
+.p {
+    font-family: cooper;
+}
+
+.endBack {
+    color: white;
+    font-family: cooper;
+    text-align: center;
+}
+
+.endBack a:visited {
+    color: white;
+}
+
+.endBack a:hover {
+    color: orchid;
+}
